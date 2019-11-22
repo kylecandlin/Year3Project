@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: azure;
+  background-color: white;
 }
 
 .container {
@@ -32,21 +32,23 @@ body {
 
 .nav-bar {
   grid-area: nav;
-  background-color: none;
+  background-color: #1a1a1a;
   justify-self: end;
   width: 100%;
+  height: 48px;
 }
 
-.nav-bar ul {
+#nav-button, #nav-menu {
   list-style-type: none;
   padding: 0px;
   width: 100%;
   overflow: hidden;
 	margin-top: 0px;
 	margin-bottom: 0;
+  position: sticky;
 }
 
-.nav-bar li {
+#nav-button li {
   float: right;
   width: 120px;
   height: 80px;
@@ -54,7 +56,7 @@ body {
   font-weight: 100;
 }
 
-.nav-bar li a {
+#nav-button li a, #nav-menu li a {
   display: block;
   color: white;
   padding: 14px 0px;
@@ -65,15 +67,44 @@ body {
   border: 2px black hidden;
 }
 
-.nav-bar li:first-child a {
-  border-left: 1px solid white;
-  color: white;
+#nav-button li:first-child a {
+  border-left: 1px solid rgb(41, 44, 47);
+  color: ghostwhite;
 }
 
-.nav-bar li a:hover {
+#nav-button li a:hover, #nav-menu li a:hover {
   background-color: rgba(160, 160, 160, 0.3);
   border-bottom: 2px green solid;
   transition: ease-in-out, 0.5s;
+}
+
+#nav-menu li a:hover {
+  border: none;
+}
+
+.menu-icon {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 15px 0 15px;
+  color: #999;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  display: none;
+}
+
+#hamburger {
+  line-height: 45px;
+  font-size: 1.4em;
+}
+
+#cross {
+  line-height: 60px;
+  font-size: 3em;
 }
 
 .content {
@@ -94,7 +125,6 @@ body {
   width: 96%;
   height: auto;
   padding: 2%;
-
   display: grid;
   grid-template-columns: 25% 35% 35%;
   grid-template-rows: auto;
@@ -138,7 +168,7 @@ body {
 
 .footer-contact-icon, .footer-media-icon {
   float: left;
-  background-color: rgb(50, 55, 60);
+  background-color: #32373c;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -172,6 +202,10 @@ body {
   line-height: 1.75;
 }
 
+@media only screen and () {
+
+}
+
 @media only screen and (max-width: 850px) {
   .container {
     display: grid;
@@ -185,10 +219,21 @@ body {
 
   .nav-bar {
     justify-self: stretch;
+    position: fixed;
   }
 
-  .nav-bar li {
-    width: 33.3%;
+  #nav-button {
+    display: none;
+  }
+
+  #nav-menu {
+    display: none;
+    background-color: #1a1a1a;
+    position: absolute;
+  }
+
+  .menu-icon {
+    display: block;
   }
 
   .page-footer {
@@ -223,5 +268,16 @@ body {
     justify-self: center;
     grid-area: footer-bottom;
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 851px) {
+  #nav-button {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    visibility: hidden;
   }
 }

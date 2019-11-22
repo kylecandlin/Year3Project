@@ -3,16 +3,28 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <link rel="stylesheet" href="CSS/css.css" type="text/css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="JavaScript/index.js"></script>
 </head>
 <body>
   <section class="container">
     <section class="top-container">
       <img id="pub-bar-img" src="Images/pubv2.jpg" alt="bar-image"></img>
       <section class="nav-bar">
+        <button id="hamburger" class="menu-icon">&#9776;</button>
+        <button id="cross" class="menu-icon">&#735;</button>
         <ul id="nav-button">
           <li><a href="page2.html">Log In</a></li>
           <li><a href="page1.html">Page1</a></li>
           <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html">Page1</a></li>
+          <li><a href="page2.html">Log In</a></li>
         </ul>
       </section>
     </section>
