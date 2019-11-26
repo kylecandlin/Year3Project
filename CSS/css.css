@@ -16,22 +16,16 @@ body {
 .top-container {
   grid-area: header;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 80px 1fr 80px;
+  grid-template-rows: auto 500px;
   grid-template-areas:
     "nav nav nav"
-    "image image image";
-}
-
-#pub-bar-img {
-  width: 100%;
-  height: auto;
-  grid-area: image;
+    ". header-content .";
 }
 
 .nav-bar {
   grid-area: nav;
-  background-color: #1a1a1a;
+  background-color: white;
   justify-self: end;
   width: 100%;
   height: 48px;
@@ -44,7 +38,6 @@ body {
   overflow: hidden;
 	margin-top: 0px;
 	margin-bottom: 0;
-  position: relative;
 }
 
 #nav-button li {
@@ -55,20 +48,24 @@ body {
   font-weight: 100;
 }
 
+#nav-menu li {
+  background-color: white;
+}
+
 #nav-button li a, #nav-menu li a {
   display: block;
-  color: white;
+  color: #413c3c;
   padding: 14px 0px;
   text-decoration: none;
   font-family: Arial;
   text-align: center;
   vertical-align: middle;
-  border: 2px black hidden;
+  border: 2px white hidden;
 }
 
 #nav-button li:first-child a {
-  border-left: 1px solid rgb(41, 44, 47);
-  color: ghostwhite;
+  border-left: 1px #1a1a1a solid;
+  color: #413c3c;
 }
 
 #nav-button li a:hover, #nav-menu li a:hover {
@@ -87,7 +84,7 @@ body {
   top: 0;
   right: 0;
   padding: 3px 15px 0 15px;
-  color: #999;
+  color: black;
   border: 0;
   font-weight: bold;
   cursor: pointer;
@@ -107,14 +104,31 @@ body {
   display: none;
 }
 
+.header-content {
+  grid-area: header-content;
+  background: url(pub3.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .content {
   grid-area: content;
-  background-color: ghostwhite;
-  z-index: 1;
-  margin: -2% 0 -1% 0;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  padding: 30px;
+  margin: 60px 0 60px 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "info-img info-header info-header"
+  "info-img info-text info-text"
 }
 
 .page-footer {
