@@ -11,6 +11,7 @@ $(document).ready(function(){
   $("#hamburger").click(function() {
     $("#nav-menu").slideToggle("slow");
     $("#hamburger").hide();
+    $("#pub-title").fadeToggle("slow");
     $("#cross").show();
   });
 
@@ -18,5 +19,6 @@ $(document).ready(function(){
     $("#nav-menu").slideToggle("slow");
     $("#cross").hide();
     $("#hamburger").show();
+    $("#pub-title").fadeToggle("slow");
   });
 });

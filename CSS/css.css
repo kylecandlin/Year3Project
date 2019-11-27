@@ -115,6 +115,18 @@ body {
   width: 100%;
 }
 
+#pub-title {
+  display: block;
+  grid-area: header-content;
+  background-color: rgba(0, 0, 0, 0.75);
+  font-size: 48px;
+  place-self: end center;
+  margin-bottom: 8%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
 .content {
   grid-area: content;
   background-color: white;
@@ -127,9 +139,9 @@ body {
 
 .info-container {
   display: block;
-  width: 96%;
+  width: 92%;
   margin: 2%;
-  padding: 20px;
+  padding: 2%;
   text-align: left;
 }
 
@@ -154,6 +166,14 @@ body {
   margin: 20px;
 }
 
+.info-container:nth-child(even) .info-container-header,  .info-container:nth-child(even) .info-container-text{
+  text-align: right;
+}
+
+.info-container:nth-child(even) .info-container-image {
+  float: right;
+}
+
 .page-footer {
   grid-area: footer;
   background: rgb(41, 44, 47);
@@ -167,14 +187,6 @@ body {
   grid-template-rows: auto;
   grid-template-areas:
   "footer-left footer-center footer-right";
-}
-
-.info-container:nth-child(even) {
-  text-align: right;
-}
-
-.info-container-image:nth-child(even) {
-  float: right;
 }
 
 #footer-company-details, #footer-contact-details, #footer-company-about {
@@ -247,6 +259,13 @@ body {
   line-height: 1.75;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 851px) {
+  .info-container-image {
+    width: 300px;
+    height: 200px;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .container {
     display: grid;
@@ -274,6 +293,31 @@ body {
 
   .menu-icon {
     display: block;
+  }
+
+  #pub-title {
+    grid-area: nav;
+    place-self: stretch stretch;
+    margin: 2px 0 0 10px;
+    padding: 0;
+    font-size: 36px;
+    color: black;
+    background: none;
+    position: fixed;
+  }
+
+  .info-container-image {
+    width: 90%;
+    margin: 5%;
+  }
+
+  .info-container-header, .info-container-text {
+    text-align: center;
+    display: block;
+  }
+
+  .info-container:nth-child(even) .info-container-header,  .info-container:nth-child(even) .info-container-text{
+    text-align: center;
   }
 
   .page-footer {
