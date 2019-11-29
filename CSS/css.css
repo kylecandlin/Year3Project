@@ -29,24 +29,23 @@ body {
   background-color: white;
   justify-self: end;
   width: 100%;
-  height: 48px;
+  top: 0;
   position: fixed;
-  transition: 0.25s;
+  transition: ease-in-out, 0.5s;
 }
 
 #nav-button, #nav-menu {
   list-style-type: none;
-  padding: 0px;
+  padding: 0;
   width: 100%;
   overflow: hidden;
-	margin-top: 0px;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
 #nav-button li {
   float: right;
   width: 120px;
-  height: 80px;
   border: none;
   font-weight: 100;
 }
@@ -93,6 +92,7 @@ body {
   cursor: pointer;
   outline: none;
   z-index: 2;
+  float: right;
   display: none;
 }
 
@@ -186,7 +186,7 @@ body {
   grid-template-columns: 25% 35% 35%;
   grid-template-rows: auto;
   grid-template-areas:
-  "footer-left footer-center footer-right";
+    "footer-left footer-center footer-right";
 }
 
 #footer-company-details, #footer-contact-details, #footer-company-about {
@@ -270,16 +270,11 @@ body {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     grid-template-areas:
-    "header header header header"
-    "content content content content"
-    "footer footer footer footer";
-  }
-
-  .nav-bar {
-    justify-self: stretch;
-    position: fixed;
+      "header header header header"
+      "content content content content"
+      "footer footer footer footer";
   }
 
   #nav-button {
@@ -325,13 +320,13 @@ body {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-    "footer-left footer-right"
-    "footer-bottom footer-bottom";
+      "footer-left footer-right"
+      "footer-bottom footer-bottom";
   }
 
   #footer-company-details, #footer-contact-details, #footer-company-about {
     text-align: left;
-    margin: 10px 0;
+    margin: 10px 2%;
     width: 96%;
   }
 
@@ -360,7 +355,8 @@ body {
     display: block;
   }
 
-  #nav-menu {
+  #nav-menu, #hamburger, #cross {
     display: none;
+    visibility: hidden;
   }
 }
