@@ -115,7 +115,7 @@ body {
   width: 100%;
 }
 
-#pub-title {
+#pub-title-header {
   display: block;
   grid-area: header-content;
   background-color: rgba(0, 0, 0, 0.75);
@@ -125,6 +125,18 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   color: white;
+}
+
+#pub-title-nav {
+  grid-area: nav;
+  place-self: stretch stretch;
+  margin: 6px;
+  padding: 0;
+  font-size: 30px;
+  color: black;
+  background: none;
+  position: relative;
+  display: none;
 }
 
 .content {
@@ -290,15 +302,12 @@ body {
     display: block;
   }
 
-  #pub-title {
-    grid-area: nav;
-    place-self: stretch stretch;
-    margin: 2px 0 0 10px;
-    padding: 0;
-    font-size: 36px;
-    color: black;
-    background: none;
-    position: fixed;
+  #pub-title-nav {
+    display: block;
+  }
+
+  #pub-title-header {
+    display: none;
   }
 
   .info-container-image {
