@@ -2,8 +2,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link rel="stylesheet" href="CSS/index.css?version=8" type="text/css">
-  <link rel="stylesheet" href="CSS/home.css" type="text/css">
+  <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
+  <link rel="stylesheet" href="CSS/login.css?version=3" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -28,26 +28,15 @@
           <li><a href="login.html">Log In</a></li>
         </ul>
       </section>
-      <section class="header-content">
-      </section>
-      <h1 id="pub-title-header"> Title Goes Here </h1>
     </section>
     <section class="content">
-      <section class="info-container">
-        <img src="images/pub.jpg" class="info-container-image" />
-        <h1 class="info-container-header"> This is a Test </h1>
-        <p class="info-container-text"> This is to help me style this box. </p>
-      </section>
-      <section class="info-container">
-        <img src="images/pub.jpg" id="image1" class="info-container-image" />
-        <h1 class="info-container-header"> This is a Test </h1>
-        <p class="info-container-text"> This is to help me style this box. </p>
-      </section>
-      <section class="info-container">
-        <img src="images/pub.jpg" class="info-container-image" />
-        <h1 class="info-container-header"> This is a Test </h1>
-        <p class="info-container-text"> This is to help me style this box. </p>
-      </section>
+      <form id="loginForm">
+        <h1> Login </h1>
+        <input class="input-button" type="text" placeholder="Username" />
+        <input class="input-button" type="text" placeholder="Password" />
+        <input id="submit-button" class="input-button" type="submit" value="Log In"/>
+        <p> No account? <a href="register.php"> Create one here. </a></p>
+      </form>
     </section>
     <section class="page-footer">
         <section id="footer-company-details">
