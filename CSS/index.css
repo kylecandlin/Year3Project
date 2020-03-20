@@ -110,7 +110,7 @@ h1 {
 
 .header-content {
   grid-area: header-content;
-  background: url(pub3.jpg) no-repeat center center fixed;
+  background: url(Images/pub3.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
