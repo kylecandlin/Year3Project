@@ -128,18 +128,6 @@ h1 {
   display: none;
 }
 
-#pub-title-header {
-  display: block;
-  grid-area: header-content;
-  background-color: rgba(0, 0, 0, 0.75);
-  font-size: 48px;
-  place-self: end center;
-  margin-bottom: 8%;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-}
-
 .content {
   grid-area: content;
   background-color: white;

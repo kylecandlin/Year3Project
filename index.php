@@ -1,9 +1,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
-  <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
-  <link rel="stylesheet" href="CSS/login.css?version=3" type="text/css">
+  <link rel="stylesheet" href="CSS/index.css?version=10" type="text/css">
+  <link rel="stylesheet" href="CSS/home.css" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -18,25 +19,36 @@
         <button id="cross" class="menu-icon">&#735;</button>
         <h1 id="pub-title-nav"> Title Goes Here </h1>
         <ul id="nav-button">
-          <li><a href="login.html">Log In</a></li>
+          <li><a href="login.php?version=4">Log In</a></li>
           <li><a href="page1.html">Page1</a></li>
           <li><a href="index.html">Home</a></li>
         </ul>
         <ul id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="page1.html">Page1</a></li>
-          <li><a href="login.html">Log In</a></li>
+          <li><a href="login.php">Log In</a></li>
         </ul>
       </section>
+      <section class="header-content">
+      </section>
+      <h1 id="pub-title-header"> Title Goes Here </h1>
     </section>
     <section class="content">
-      <form id="loginForm">
-        <h1> Login </h1>
-        <input class="input-button" type="text" placeholder="Username" />
-        <input class="input-button" type="text" placeholder="Password" />
-        <input id="submit-button" class="input-button" type="submit" value="Log In"/>
-        <p> No account? <a href="register.php"> Create one here. </a></p>
-      </form>
+      <section class="info-container">
+        <img src="images/pub.jpg" class="info-container-image" />
+        <h1 class="info-container-header"> This is a Test </h1>
+        <p class="info-container-text"> This is to help me style this box. </p>
+      </section>
+      <section class="info-container">
+        <img src="images/pub.jpg" id="image1" class="info-container-image" />
+        <h1 class="info-container-header"> This is a Test </h1>
+        <p class="info-container-text"> This is to help me style this box. </p>
+      </section>
+      <section class="info-container">
+        <img src="images/pub.jpg" class="info-container-image" />
+        <h1 class="info-container-header"> This is a Test </h1>
+        <p class="info-container-text"> This is to help me style this box. </p>
+      </section>
     </section>
     <section class="page-footer">
         <section id="footer-company-details">

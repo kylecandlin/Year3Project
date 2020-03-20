@@ -1,8 +1,18 @@
+<?php
+  require 'Includes/connect.php';
+  //require 'Includes/navigationPanel.php';
+  require 'Includes/UserFunctions.php';
+
+  if(isset($_POST['submitButton'])){
+    $user = new UserFunctions($pdo);
+    $user->SignIn($_POST['username'], $_POST['password']);
+  }
+?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="CSS/index.css?version=7" type="text/css">
+  <title>Login</title>
+  <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
   <link rel="stylesheet" href="CSS/login.css?version=3" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -18,7 +28,7 @@
         <button id="cross" class="menu-icon">&#735;</button>
         <h1 id="pub-title-nav"> Title Goes Here </h1>
         <ul id="nav-button">
-          <li><a href="login.php">Log In</a></li>
+          <li><a href="login.php?version=2">Log In</a></li>
           <li><a href="page1.html">Page1</a></li>
           <li><a href="index.html">Home</a></li>
         </ul>
@@ -30,10 +40,13 @@
       </section>
     </section>
     <section class="content">
-      <form id="loginForm" method="post">
+      <form action="" method="post" id="loginForm">
         <h1> Login </h1>
-        <input class="input-container-input" type="text" placeholder="Username" />
-        <input class="input-container-input" type="text" placeholder="Password" />
+        <input name="username" class="input-button" type="text" placeholder="Username" />
+        <input name="password" class="input-button" type="text" placeholder="Password" />
+        <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Log In"/>
+        <p> No account? <a href="register.php"> Create one here. </a></p>
+
       </form>
     </section>
     <section class="page-footer">

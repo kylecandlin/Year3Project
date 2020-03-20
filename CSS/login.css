@@ -50,6 +50,10 @@ form h1 {
   border: 1px #666 solid;
 }
 
+::-webkit-inner-spin-button {
+  display: none;
+}
+
 #submit-button {
   background: linear-gradient(rgba(51, 133, 255, 0.7), rgba(51, 133, 255, 0.9));
   color: white;
