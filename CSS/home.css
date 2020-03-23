@@ -12,7 +12,6 @@
   display: block;
   width: 92%;
   margin: 2%;
-  padding: 2%;
   text-align: left;
 }
 
@@ -28,16 +27,21 @@
 
 .info-container-header {
   font-size: 36px;
-  margin: 20px;
+  margin: 20px 0 0 0;
+}
+
+.info-container-subheader {
+  font-size: 24px;
+  margin: 0;
 }
 
 .info-container-text {
   font-size: 16px;
   font-weight: 100;
-  margin: 20px;
 }
 
 .info-container:nth-child(even) .info-container-header,
+.info-container:nth-child(even) .info-container-subheader,
 .info-container:nth-child(even) .info-container-text{
   text-align: right;
 }
@@ -59,12 +63,13 @@
     margin: 5%;
   }
 
-  .info-container-header, .info-container-text {
+  .info-container-header, .info-container-subheader, .info-container-text {
     text-align: center;
     display: block;
   }
 
   .info-container:nth-child(even) .info-container-header,
+  .info-container:nth-child(even) .info-container-subheader,
   .info-container:nth-child(even) .info-container-text{
     text-align: center;
   }

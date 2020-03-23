@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
   <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
   <link rel="stylesheet" href="CSS/login.css?version=3" type="text/css">
@@ -19,13 +20,14 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="JavaScript/index.js"></script>
+  <script src="login.js"></script>
 </head>
 <body>
   <section class="container">
     <section class="content">
       <form action="" method="post" id="loginForm">
         <h1> Login </h1>
-        <input name="username" class="input-button" type="text" placeholder="Username" />
+        <input name="username" id="username" class="input-button" type="text" placeholder="Username" />
         <input name="password" class="input-button" type="text" placeholder="Password" />
         <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Log In"/>
         <p> No account? <a href="register.php"> Create one here. </a></p>

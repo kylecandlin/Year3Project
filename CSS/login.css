@@ -13,7 +13,7 @@
   float: left;
 }
 
-#loginForm {
+/*#loginForm {
   width: 92%;
   min-width: 350px;
   max-width: 950px;
@@ -21,7 +21,7 @@
   padding: 2%;
   border-radius: 10px;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.15), 0 8px 16px 8px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 form h1 {
   width: 40%;

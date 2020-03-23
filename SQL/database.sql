@@ -25,6 +25,7 @@ CREATE TABLE Event (
   CONSTRAINT PK_Event PRIMARY KEY(EventID)
 );
 
+-- Create Staff table --
 CREATE TABLE Staff (
   StaffID INT(3) NOT NULL AUTO_INCREMENT,
   Forename VARCHAR(50) NOT NULL,

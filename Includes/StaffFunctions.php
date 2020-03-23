@@ -1,6 +1,6 @@
 <?php
   class StaffFunctions {
-    protected $pdo;
+    protected $pdo = null;
     protected $salt = ".!Ql6*zcn-IvWAk7]Jkg?Tz3*8j1wfCZ;h<X&$[W u^og:j#uo-OCy3mnt>LLyc";
 
     function __construct($pdo)
