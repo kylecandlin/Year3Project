@@ -1,6 +1,6 @@
 <?php
   include 'Includes/connect.php';
-  include 'Includes/navigationPanelHome.php';
+  include 'Includes/navigationPanel.php';
   include 'Includes/showData.php';
 ?>
 <html lang="en">
@@ -8,8 +8,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
-  <link rel="stylesheet" href="CSS/index.css?version=10" type="text/css">
-  <link rel="stylesheet" href="CSS/home.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
+  <link rel="stylesheet" href="CSS/infoBox.css" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -24,8 +25,7 @@
         $data->output();
       ?>
       </section>
-    </section>
     <?php include 'Includes/footer.php'; ?>
-  </section>
+    </section>
 </body>
 </html>

@@ -20,15 +20,15 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="JavaScript/index.js"></script>
-  <script src="login.js"></script>
+  <script src="JavaScript/login.js"></script>
 </head>
 <body>
   <section class="container">
     <section class="content">
       <form action="" method="post" id="loginForm">
         <h1> Login </h1>
-        <input name="username" id="username" class="input-button" type="text" placeholder="Username" />
-        <input name="password" class="input-button" type="text" placeholder="Password" />
+        <input id="username" name="username" class="input-button" type="text" placeholder="Username" />
+        <input id="password" name="password" class="input-button" type="text" placeholder="Password" />
         <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Log In"/>
         <p> No account? <a href="register.php"> Create one here. </a></p>
       </form>

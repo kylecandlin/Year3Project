@@ -8,6 +8,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="CSS/index.css?version=10" type="text/css">
   <link rel="stylesheet" href="CSS/home.css" type="text/css">
+  <link rel="stylesheet" href="CSS/infoBox.css" type="text/css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

@@ -1,6 +1,5 @@
 <?php
 echo '
-<body>
   <section class="top-container">
     <section class="nav-bar">
       <button id="hamburger" class="menu-icon">&#9776;</button>
@@ -17,6 +16,5 @@ echo '
         <li><a href="login.php">Log In</a></li>
       </ul>
     </section>
-  </section>
-</body> ';
+  </section>';
 ?>
