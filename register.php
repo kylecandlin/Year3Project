@@ -20,6 +20,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="JavaScript/index.js"></script>
+  <script src="JavaScript/validation.js"></script>
 </head>
 <body>
   <section class="container">
@@ -27,8 +28,11 @@
       <form action="" method="post" id="registerForm">
         <h1> Register </h1>
         <input name="username" class="input-button" type="text" placeholder="Username" />
-        <input name="password" class="input-button" type="text" placeholder="Password" />
+        <p id="usernameCheck"></p>
+        <input id="password" name="password" class="input-button" type="text" placeholder="Password" />
+        <p id="passwordCheck"></p>
         <input id="DOB" name="DOB" class="input-button" type="date" />
+        <p id="dobCheck" class="validCheck"></p>
         <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Create Account"/>
         <p> Already have an account? <a href="login.php"> Log in here. </a></p>
       </form>

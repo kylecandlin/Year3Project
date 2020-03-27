@@ -5,12 +5,21 @@ body {
   font-weight: 100;
 }
 
+body::-webkit-scrollbar {
+  width: 0!important;
+}
+
 h1 {
   font-weight: 200;
 }
 
 a {
+  text-decoration: none;
   color: green;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -22,6 +31,16 @@ a {
     "header header header header header header"
     ". content content content content ."
     "footer footer footer footer footer footer";
+}
+
+.top-container {
+  height: auto;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "nav nav nav";
 }
 
 .nav-bar {

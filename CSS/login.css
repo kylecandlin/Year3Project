@@ -1,12 +1,3 @@
-.top-container {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 80px 1fr 80px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "nav nav nav";
-}
-
 #pub-title-nav {
   display: block;
   position: absolute;
@@ -79,6 +70,11 @@ form p a {
 
 form p a:hover {
   text-decoration: underline;
+}
+
+.validCheck {
+  color: red;
+  margin: 0;
 }
 
 @media only screen and (max-width: 850px) {
