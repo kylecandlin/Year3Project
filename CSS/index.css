@@ -37,7 +37,7 @@ a:hover {
   height: auto;
   grid-area: header;
   display: grid;
-  grid-template-columns: 80px 1fr 80px;
+  grid-template-columns: 80px auto 80px;
   grid-template-rows: auto;
   grid-template-areas:
     "nav nav nav";
@@ -70,14 +70,12 @@ a:hover {
   float: right;
   width: 120px;
   border: none;
+  padding: 7px;
 }
 
 #nav-button li a {
-  border-bottom: 2px white solid;
-}
-
-#nav-menu li {
-  background-color: white;
+  border-bottom: 1px white solid;
+  font-weight: 200;
 }
 
 #nav-button li a, #nav-menu li a {
@@ -85,19 +83,19 @@ a:hover {
   color: #413c3c;
   padding: 14px 0px;
   text-decoration: none;
-  font-family: Arial;
   text-align: center;
   vertical-align: middle;
 }
 
 #nav-button li:first-child a {
-  border-left: 1px #1a1a1a solid;
+  border-radius: 10px;
+  border: 1px rgb(224, 250, 224) solid;
+  background: rgb(204, 255, 204)	;
   color: #413c3c;
 }
 
 #nav-button li a:hover, #nav-menu li a:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-bottom: 2px green solid;
+  border-bottom: 1px green solid;
   transition: ease-in-out, 0.5s;
 }
 
@@ -132,14 +130,6 @@ a:hover {
   display: none;
 }
 
-.header-content {
-  grid-area: header-content;
-  background: url(Images/pub3.jpg) no-repeat center center fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
 #pub-title-nav {
   grid-area: nav;
   place-self: stretch stretch;
@@ -155,7 +145,6 @@ a:hover {
 .content {
   grid-area: content;
   background-color: white;
-  padding: 30px;
   margin: 60px 0 60px 0;
   display: grid;
   grid-template-columns: auto;

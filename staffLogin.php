@@ -13,6 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
   <link rel="stylesheet" href="CSS/login.css?version=4" type="text/css">
   <script

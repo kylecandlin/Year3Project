@@ -32,7 +32,7 @@
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Quis commodo odio aenean sed adipiscing diam donec. In cursus 0turpis
           massa tincidunt dui ut ornare lectus. Commodo elit at imperdiet dui. </p>
-        <p><a href="staffLogin.php">Staff Login</a></p>
+        <h1><a href="staffLogin.php">Staff Login</a></h1>
       </section>
   </section>
   ';

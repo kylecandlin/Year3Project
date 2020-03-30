@@ -1,9 +1,46 @@
 .top-container {
   grid-area: header;
+  border-radius: 0 0 30px 30px;
+  /* box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.15), 0 8px 16px 8px rgba(0, 0, 0, 0.2); */
+  background: rgb(230, 245, 255);
+  border-bottom: 0.5px rgb(225, 240, 250) solid;
   display: grid;
   grid-template-columns: 80px 1fr 80px;
-  grid-template-rows: auto 600px;
+  grid-template-rows: auto 700px;
   grid-template-areas:
     "nav nav nav"
     ". header-content .";
+}
+
+.nav-bar {
+  background: rgb(230, 245, 255);
+}
+
+#nav-button li a {
+  border-bottom: 1px rgb(230, 245, 255) solid;
+}
+
+.header-content {
+  grid-area: header-content;
+  width: 100%;
+}
+
+.content {
+  margin-top: -100px;
+  border-top: 0.5px rgb(225, 240, 250) solid;
+}
+
+.box-border {
+  width: 0.5px;
+  height: 99px;
+  background: rgb(225, 240, 250);
+  grid-row: 1;
+}
+
+.box-border #left {
+  justify-self: start;
+}
+
+.box-border #right {
+  justify-self: end;
 }
