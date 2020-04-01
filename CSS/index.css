@@ -85,18 +85,24 @@ a:hover {
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
+  transition: ease-in-out, 0.5s;
 }
 
 #nav-button li:first-child a {
   border-radius: 10px;
-  border: 1px rgb(224, 250, 224) solid;
-  background: rgb(204, 255, 204)	;
+  border: none;
+  background: #a2c1e094;
   color: #413c3c;
+  transition: ease-in-out, background 0.5s;
 }
 
 #nav-button li a:hover, #nav-menu li a:hover {
   border-bottom: 1px green solid;
-  transition: ease-in-out, 0.5s;
+}
+
+#nav-button li:first-child a:hover {
+  background: #a2c1e037;
+  border: none;
 }
 
 #nav-menu li a:hover {
@@ -146,9 +152,9 @@ a:hover {
   grid-area: content;
   background-color: white;
   margin: 60px 0 60px 0;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; */
 }
 
 .page-footer {

@@ -20,13 +20,11 @@
 <body>
   <section class="container">
     <section class="content">
-      <section id="left-box-border" class="box-border">
+      <section id="box-border" class="box-border">
       </section>
-      <section id="right-box-border" class="box-border">
-      </section>
-      <section>
-        <h1> Main Header Here </h1>
-        <p> Some content here as well. </p>
+      <section class="info-header-container">
+        <h1> Get Hex Codes for RGB Colours </h1>
+        <p> This is a subsection to the main header </p>
       </section>
       <section class="info-container">
         <img src="CSS/Images/pub.jpg" class="info-container-image" />

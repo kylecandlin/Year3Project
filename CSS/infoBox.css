@@ -1,6 +1,21 @@
+.info-header-container {
+  display: inline-block;
+  text-align: center;
+  width: 96%;
+  margin: -2% 2% 2% 2%;
+}
+
+.info-header-container h1 {
+  font-size: 48px;
+  font-weight: 200;
+  margin: 0 auto;
+  width: 40%;
+  border-bottom: 1px #1a1a1a solid;
+}
+
 .info-container {
-  display: block;
-  width: 92%;
+  display: inline-block;
+  width: 96%;
   margin: 2%;
   text-align: left;
 }
@@ -32,11 +47,9 @@
 
 .info-container:nth-child(even) .info-container-header,
 .info-container:nth-child(even) .info-container-subheader,
-.info-container:nth-child(even) .info-container-text{
-  text-align: right;
-}
-
+.info-container:nth-child(even) .info-container-text,
 .info-container:nth-child(even) .info-container-image {
+  text-align: right;
   float: right;
 }
 
