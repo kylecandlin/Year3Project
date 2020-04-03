@@ -13,7 +13,7 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     if ($(document).scrollTop() > 10) {
-      $(".nav-bar").css("box-shadow", "0 0 4px 0 rgba(0, 0, 0, 0.3), 0 0 20px 0 rgba(0, 0, 0, 0.2)");
+      $(".nav-bar").css("box-shadow", "0 0 4px 0 #0000004C, 0 0 20px 0 #00000033");
     }
     else {
       $(".nav-bar").css("box-shadow", "none");

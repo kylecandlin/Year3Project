@@ -45,12 +45,12 @@ a:hover {
 
 .nav-bar {
   grid-area: nav;
-  background-color: white;
   justify-self: end;
   width: 100%;
   top: 0;
   position: fixed;
   transition: ease-in-out, 0.5s;
+  background: white;
 }
 
 #nav-button, #nav-menu {
@@ -63,7 +63,8 @@ a:hover {
 }
 
 #nav-menu {
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25)
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+  transition: ease-in-out, background 0.5s;
 }
 
 #nav-button li {
@@ -85,7 +86,7 @@ a:hover {
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
-  transition: ease-in-out, 0.5s;
+  transition: ease-in-out, border-bottom 0.5s;
 }
 
 #nav-button li:first-child a {
@@ -159,7 +160,7 @@ a:hover {
 
 .page-footer {
   grid-area: footer;
-  background: rgb(41, 44, 47);
+  background: #292c2f;
   color: white;
   bottom: 0;
   width: 96%;
@@ -257,7 +258,6 @@ a:hover {
 
   #nav-menu {
     display: none;
-    background-color: #1a1a1a;
   }
 
   .menu-icon {

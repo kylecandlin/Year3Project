@@ -46,14 +46,14 @@ form h1 {
 }
 
 #submit-button {
-  background: linear-gradient(rgba(51, 133, 255, 0.7), rgba(51, 133, 255, 0.9));
+  background: linear-gradient(#3385FFB3, #3385FFE6);
   color: white;
   border: none;
   margin-top: 2%;
 }
 
 #submit-button:hover {
-  background: linear-gradient(rgba(51, 133, 255, 0.65), rgba(51, 133, 255, 0.85));
+  background: linear-gradient(#3385FFA6, #3385FFD9);
 }
 
 form p {

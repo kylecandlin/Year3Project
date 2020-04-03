@@ -20,7 +20,7 @@
 <body>
   <section class="container">
     <section class="content">
-      <section id="box-border" class="box-border">
+      <section class="box-border">
       </section>
       <section class="info-header-container">
         <h1> Get Hex Codes for RGB Colours </h1>
