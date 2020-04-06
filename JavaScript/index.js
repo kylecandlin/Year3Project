@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  /*** Naviation Bar Functions and Functionality ***/
   function closeNav(){
     $("#nav-menu").slideUp("slow");
     $("#cross").hide();
@@ -11,6 +13,18 @@ $(document).ready(function(){
     $("#cross").show();
   }
 
+  $(window).resize(function(){
+    closeNav();
+  });
+
+  $("#hamburger").click(function(){
+    openNav();
+  });
+
+  $("#cross").click(function(){
+    closeNav();
+  });
+
   $(window).scroll(function(){
     if ($(document).scrollTop() > 10) {
       $(".nav-bar").css("box-shadow", "0 0 4px 0 #0000004C, 0 0 20px 0 #00000033");
@@ -20,16 +34,12 @@ $(document).ready(function(){
     }
   });
 
-  $(window).resize(function(){
-    closeNav();
-  });
+  /*** PHP Session Variable Handling ***/
+  if(userID != null) {
+    $("#nav-login a").text(userID);
+  }
+  else {
+    $("#nav-login a").text("Login");
+  }
 
-
-  $("#hamburger").click(function(){
-    openNav();
-  });
-
-  $("#cross").click(function(){
-    closeNav();
-  });
 });

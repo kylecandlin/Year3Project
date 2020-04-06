@@ -1,10 +1,13 @@
 <?php
   include 'Includes/connect.php';
-  include 'Includes/navigationPanel.php';
   include 'Includes/showData.php';
+  session_start();
 ?>
 <html lang="en">
 <head>
+  <script>
+    var userID = '<?php echo $_SESSION['username']; ?>';
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
@@ -18,6 +21,9 @@
   <script src="JavaScript/index.js"></script>
 </head>
 <body>
+  <section class="top-container">
+    <?php include 'Includes/navigationPanel.php'; ?>
+  </section>
   <section class="container">
     <section class="content">
       <?php

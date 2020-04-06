@@ -1,8 +1,9 @@
-<?php
-  include 'Includes/navigationPanelHome.php';
-?>
+<?php session_start(); ?>
 <html lang="en">
 <head>
+  <script>
+    var userID = '<?php echo $_SESSION['username']; ?>';
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
@@ -18,13 +19,20 @@
   <script src="JavaScript/home.js"></script>
 </head>
 <body>
+  <section class="top-container">
+    <?php include 'Includes/navigationPanel.php'; ?>
+    <section class="header-content">
+      <h1 id="pub-title-header"> Recipes R Us </h1>
+    </section>
+  </section>
   <section class="container">
     <section class="content">
       <section class="box-border">
       </section>
       <section class="info-header-container">
-        <h1> Get Hex Codes for RGB Colours </h1>
+        <h1> Main Header </h1>
         <p> This is a subsection to the main header </p>
+        <a href="account.php">Account Page</a>
       </section>
       <section class="info-container">
         <img src="CSS/Images/pub.jpg" class="info-container-image" />

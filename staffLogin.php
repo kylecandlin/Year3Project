@@ -1,7 +1,7 @@
 <?php
-  require 'Includes/connect.php';
-  require 'Includes/navigationPanel.php';
-  require 'Includes/StaffFunctions.php';
+  include 'Includes/connect.php';
+  include 'Includes/StaffFunctions.php';
+  session_start();
 
   if(isset($_POST['submitButton'])){
     $user = new StaffFunctions($pdo);
@@ -10,6 +10,9 @@
 ?>
 <html lang="en">
 <head>
+  <script>
+    var userID = '<?php echo $_SESSION['username']; ?>';
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
@@ -23,6 +26,9 @@
   <script src="JavaScript/index.js"></script>
 </head>
 <body>
+  <section class="top-container">
+    <?php include 'Includes/navigationPanel.php'; ?>
+  </section>
   <section class="container">
     <section class="content">
       <form action="" method="post" id="loginForm">

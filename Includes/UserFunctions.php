@@ -34,7 +34,6 @@
         session_start();
         $_SESSION['username'] = $user['username'];
         header('Location: index.php');
-        echo $_SESSION['username'];
       }
     }
 
@@ -52,7 +51,6 @@
           session_start();
           $_SESSION['username'] = $user['Username'];
           header('Location: index.php');
-          echo $_SESSION['username'];
       }
       else {
         echo "<script> alert('Incorrect username or password.') </script>";
