@@ -1,0 +1,59 @@
+h1 {
+  font-size: 36px;
+  font-weight: 200;
+  width: 40%;
+  margin: 0 0 15px 0;
+  padding: 5px;
+}
+
+.account-menu {
+  width: 15%;
+  height: 100%;
+  float: left;
+}
+
+.account-menu ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.account-menu li {
+  display: block;
+  color: #413c3c;
+  padding: 14px 0px;
+  text-align: center;
+  border-bottom: 0.5px #e1f0fa solid;
+  transition: ease-in-out, 0.5s;
+}
+.account-menu li:first-child {
+  border-top: 0.5px #e1f0fa solid;
+}
+
+.account-menu li:hover {
+  background: #e6f5ff;
+}
+
+.account-container {
+  width: 80%;
+  float: right;
+  padding-left: 15px;
+  height: 500px;
+}
+
+.account-details-table {
+  border: none;
+  padding: 15px 15px 15px 0;
+  font-weight: 100;
+}
+
+.account-details-table th, .account-details-table td {
+  padding: 5px;
+}
+
+.account-details-table th {
+  text-align: left;
+  padding-right: 50px;
+}

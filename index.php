@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include 'Includes/sessionStart.php'; ?>
 <html lang="en">
 <head>
   <script>
@@ -32,7 +32,6 @@
       <section class="info-header-container">
         <h1> Main Header </h1>
         <p> This is a subsection to the main header </p>
-        <a href="account.php">Account Page</a>
       </section>
       <section class="info-container">
         <img src="CSS/Images/pub.jpg" class="info-container-image" />

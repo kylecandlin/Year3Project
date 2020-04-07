@@ -32,10 +32,8 @@
 
         $stmt->execute();
 
-        session_start();
         $_SESSION['username'] = $user['username'];
         header('Location: index.php');
-        echo $_SESSION['username'];
       }
     }
 
@@ -50,10 +48,8 @@
       $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
       if($user && password_verify($password.$this->salt, $user['Password'])){
-          session_start();
           $_SESSION['username'] = $user['Username'];
           header('Location: index.php');
-          echo $_SESSION['username'];
       }
       else {
         echo "<script> alert('Incorrect username or password.') </script>";

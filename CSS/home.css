@@ -1,7 +1,6 @@
 .top-container {
   grid-area: header;
   border-radius: 0 0 30px 30px;
-  /* box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.15), 0 8px 16px 8px rgba(0, 0, 0, 0.2); */
   background: #e6f5ff;
   border-bottom: 0.5px #e1f0fa solid;
   display: grid;

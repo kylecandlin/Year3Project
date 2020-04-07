@@ -1,7 +1,7 @@
 <?php
   include 'Includes/connect.php';
+  include 'Includes/sessionStart.php';
   include 'Includes/UserFunctions.php';
-  session_start();
 
   if(isset($_POST['submitButton'])){
     $user = new UserFunctions($pdo);

@@ -37,9 +37,10 @@ $(document).ready(function(){
   /*** PHP Session Variable Handling ***/
   if(userID != null) {
     $("#nav-login a").text(userID);
+    $("#nav-login a").attr("href", "account.php");
   }
   else {
     $("#nav-login a").text("Login");
+    $("#nav-login a").attr("href", "login.php");
   }
-
 });

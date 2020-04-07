@@ -1,7 +1,7 @@
 <?php
   include 'Includes/connect.php';
+  include 'Includes/sessionStart.php';
   include 'Includes/showData.php';
-  session_start();
 ?>
 <html lang="en">
 <head>
