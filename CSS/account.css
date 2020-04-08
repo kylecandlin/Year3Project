@@ -1,3 +1,4 @@
+/***  Account Page Sections  ***/
 h1 {
   font-size: 36px;
   font-weight: 200;
@@ -6,6 +7,7 @@ h1 {
   padding: 5px;
 }
 
+/* Side Navigation to Navigate through content sections */
 .account-menu {
   width: 15%;
   height: 100%;
@@ -20,7 +22,16 @@ h1 {
   margin: 0;
 }
 
-.account-menu li {
+/* Logout button - Applying same styles as other menu buttons */
+input {
+  background: none;
+  border: none;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+.account-menu li, input {
   display: block;
   color: #413c3c;
   padding: 14px 0px;
@@ -28,14 +39,16 @@ h1 {
   border-bottom: 0.5px #e1f0fa solid;
   transition: ease-in-out, 0.5s;
 }
+
 .account-menu li:first-child {
   border-top: 0.5px #e1f0fa solid;
 }
 
-.account-menu li:hover {
+.account-menu li:hover, input:hover {
   background: #e6f5ff;
 }
 
+/* Content section for account details */
 .account-container {
   width: 80%;
   float: right;

@@ -4,6 +4,10 @@
   include 'Includes/accountDetails.php';
 
   $user = new AccountDetails($pdo);
+
+  if(isset($_POST['logout-btn'])){
+    $user->accountLogOut();
+  }
 ?>
 <html lang="en">
 <head>
@@ -31,12 +35,13 @@
   <section class="container">
     <section class="content">
       <section>
-        <section class="account-menu">
+        <form action="" method="post" class="account-menu">
           <ul>
             <li id="account-btn">Account</li>
             <li id="event-btn">Events</li>
+            <input name="logout-btn" type="submit" value="Logout" />
           </ul>
-        </section>
+        </form>
         <section id="account-info" class="account-container">
           <?php
             $user->showAccount();

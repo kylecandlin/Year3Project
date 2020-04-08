@@ -1,3 +1,4 @@
+/***  'Global' definitions  ***/
 body {
   margin: 0;
   background-color: white;
@@ -5,6 +6,7 @@ body {
   font-weight: 100;
 }
 
+/* Removes scrollbar */
 body::-webkit-scrollbar {
   width: 0!important;
 }
@@ -22,6 +24,8 @@ a:hover {
   text-decoration: underline;
 }
 
+/***  Main code body  ***/
+/* Sets grid to cover webpage and scales responsively */
 .container {
   height: 100%;
   display: grid;
@@ -33,6 +37,8 @@ a:hover {
     "footer footer footer footer footer footer";
 }
 
+/***  Navigation Bar  ***/
+/* Sets a Naviation Bar to span the width of the page when created */
 .top-container {
   height: auto;
   grid-area: header;
@@ -110,6 +116,7 @@ a:hover {
   border: none;
 }
 
+/* Used for icons when page width < 850 */
 .menu-icon {
   background: none;
   position: absolute;
@@ -149,15 +156,16 @@ a:hover {
   display: none;
 }
 
+/***  Content Section  ***/
+/* A section that displays main content of the webpage */
 .content {
   grid-area: content;
   background-color: white;
   margin: 60px 0 60px 0;
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto; */
 }
 
+/***  Page Footer  ***/
+/* Footer Section that uses a grid to display information, scales responsively */
 .page-footer {
   grid-area: footer;
   background: #292c2f;
@@ -240,6 +248,8 @@ a:hover {
   line-height: 1.75;
 }
 
+/***  Media Queries  ***/
+/* Adjusts elements when page width is < 850 */
 @media only screen and (max-width: 850px) {
   .container {
     display: grid;
@@ -306,6 +316,7 @@ a:hover {
   }
 }
 
+/* Resets Elements when page width > 851 when previously < 850 */
 @media only screen and (min-width: 851px) {
   #nav-button {
     display: block;

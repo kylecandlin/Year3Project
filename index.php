@@ -12,15 +12,21 @@
   <link rel="stylesheet" href="CSS/home.css" type="text/css">
   <link rel="stylesheet" href="CSS/infoBox.css" type="text/css">
   <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+  </script>
   <script src="JavaScript/index.js"></script>
   <script src="JavaScript/home.js"></script>
 </head>
 <body>
   <section class="top-container">
-    <?php include 'Includes/navigationPanel.php'; ?>
+    <section class="nav-bar">
+      <h1 id="pub-title-nav"> Title Goes Here </h1>
+      <ul id="nav-button">
+        <li id="nav-login"><a href="login.php?version=4">Login</a></li>
+      </ul>
+    </section>
     <section class="header-content">
       <h1 id="pub-title-header"> Recipes R Us </h1>
     </section>

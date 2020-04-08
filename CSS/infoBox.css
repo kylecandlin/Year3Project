@@ -1,3 +1,6 @@
+/***  Information Sections  ***/
+/** Defines structure of info section and scales responsively **/
+/* Content header section */
 .info-header-container {
   display: inline-block;
   text-align: center;
@@ -13,6 +16,7 @@
   border-bottom: 1px #1a1a1a solid;
 }
 
+/* Section for Content  */
 .info-container {
   display: inline-block;
   width: 96%;
@@ -45,17 +49,19 @@
   font-weight: 100;
 }
 
+/* Makes cotent sections float right on every other section */
 .info-container:nth-child(even) .info-container-header,
 .info-container:nth-child(even) .info-container-subheader,
 .info-container:nth-child(even) .info-container-text {
   text-align: right;
 }
 
-
 .info-container:nth-child(even) .info-container-image {
   float: right;
 }
 
+/*** Media Queries ***/
+/* Adjusts image size when page width is < 1200 and > 850 */
 @media only screen and (max-width: 1200px) and (min-width: 851px) {
   .info-container-image {
     width: 300px;
@@ -63,6 +69,7 @@
   }
 }
 
+/* Adjusts layout of sections when page width < 850 */
 @media only screen and (max-width: 850px) {
   .info-header-container {
     margin: 2%;

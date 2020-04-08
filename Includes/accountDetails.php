@@ -26,6 +26,11 @@
       }
     }
 
+    function accountLogOut(){
+      unset($_SESSION['username']);
+      header('Location: index.php');
+    }
+
     function showEvent(){
       $sql = "SELECT Name, Details, Description
                 FROM Event

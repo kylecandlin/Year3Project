@@ -1,3 +1,5 @@
+/***  Adjustments to index.css for Home Page Only  ***/
+/* Adjusts container to include a large banner-like section */
 .top-container {
   grid-area: header;
   border-radius: 0 0 30px 30px;
@@ -11,6 +13,7 @@
     ". header-content .";
 }
 
+/* Adjusts Navigation Bar to appear a different colour */
 .nav-bar {
   background: #e6f5ff;
 }
@@ -24,11 +27,13 @@
   width: 100%;
 }
 
+/* Adjusts Content Section to Overlap Top-Container */
 .content {
   margin-top: -100px;
   border-top: 0.5px #e1f0fa solid;
 }
 
+/* Creates a border for the fraction of the content section that overlaps */
 .box-border {
   width: 100%;
   height: 99px;
@@ -36,16 +41,31 @@
   border-right: 0.5px #e1f0fa solid;
 }
 
+/***  Media Queries  ***/
+/* Adjusts top-container size when page width is < 1200 and > 851 */
 @media only screen and (max-width: 1200px) and (min-width: 851px) {
   .top-container {
     grid-template-rows: auto 500px;
   }
 }
 
+/* Adjusts size of top container, stops content section from overlapping and removes border,
+   ensures Login/Account button stays visible */
 @media only screen and (max-width: 850px) {
   .top-container {
     grid-template-rows: auto 200px;
     border-radius: 0;
+  }
+
+  #nav-button {
+    display: inline-block;
+    top: 0;
+    float: right;
+    width: auto;
+  }
+
+  #pub-title-nav {
+    display: inline-block;
   }
 
   .content {
