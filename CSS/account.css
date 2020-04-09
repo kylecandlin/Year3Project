@@ -20,6 +20,7 @@ h1 {
   width: 100%;
   overflow: hidden;
   margin: 0;
+  cursor: pointer;
 }
 
 /* Logout button - Applying same styles as other menu buttons */
@@ -29,6 +30,7 @@ input {
   width: 100%;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .account-menu li, input {

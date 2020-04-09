@@ -1,5 +1,5 @@
 <?php
-  class showData {
+  class eventList {
     protected $pdo = null;
 
     public function __construct($pdo) {
@@ -14,8 +14,7 @@
         $mysqldate = strtotime($row['Details']);
         $details = date('jS M, yy - h:ia', $mysqldate);
 
-        echo "<section class='info-container'>";
-        echo "<img src='CSS/Images/pub.jpg' class='info-container-image' />";
+        echo "<section id=".$row['EventID']." class='info-container'>";
         echo "<h1 class='info-container-header'>".$row['Name']."</h1>";
         echo "<h1 class='info-container-subheader'>".$details."</h1>";
         echo "<p class='info-container-text'>".$row['Description']."</p></section>";

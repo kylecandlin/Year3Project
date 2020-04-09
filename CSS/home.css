@@ -24,7 +24,40 @@
 
 .header-content {
   grid-area: header-content;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content section {
+  width: 40%;
+}
+
+#pub-title-header {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 400;
+  margin: 15px;
+  color: #413c3c;
+  min-width: 445px;
+}
+
+#event-btn {
+  background: #fff0e6;
+  width: 50%;
+  margin: auto;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 1px 4px 0 #00000033, 0 6px 20px 6px #0000002E;
+}
+
+#event-btn a {
+  display: block;
+  padding: 20px 30px;
+  font-weight: 200;
+  font-size: 24px;
+  text-align: center;
+  color: #413c3c;
 }
 
 /* Adjusts Content Section to Overlap Top-Container */
@@ -66,6 +99,11 @@
 
   #pub-title-nav {
     display: inline-block;
+  }
+
+  #pub-title-header {
+    display: none;
+    visibility: hidden;
   }
 
   .content {

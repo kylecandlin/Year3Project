@@ -22,13 +22,18 @@
 <body>
   <section class="top-container">
     <section class="nav-bar">
-      <h1 id="pub-title-nav"> Title Goes Here </h1>
+      <h1 id="pub-title-nav"> The Bridge Inn </h1>
       <ul id="nav-button">
         <li id="nav-login"><a href="login.php?version=4">Login</a></li>
       </ul>
     </section>
     <section class="header-content">
-      <h1 id="pub-title-header"> Recipes R Us </h1>
+      <section>
+        <h1 id="pub-title-header"> The Bridge Inn </h1>
+        <section id="event-btn">
+          <a href="event.php">View Events</a>
+        </section>
+      </section>
     </section>
   </section>
   <section class="container">

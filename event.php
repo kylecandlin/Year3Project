@@ -1,7 +1,7 @@
 <?php
   include 'Includes/connect.php';
   include 'Includes/sessionStart.php';
-  include 'Includes/showData.php';
+  include 'Includes/eventList.php';
 ?>
 <html lang="en">
 <head>
@@ -27,7 +27,7 @@
   <section class="container">
     <section class="content">
       <?php
-        $data = new showData($pdo);
+        $data = new eventList($pdo);
         $data->output();
       ?>
       </section>
