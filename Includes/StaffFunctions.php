@@ -14,10 +14,11 @@
       ];
       $passwordHash = password_hash($password.$this->salt, PASSWORD_BCRYPT, $options);
 
-      $sql = "SELECT * FROM Staff WHERE Username = :username";
+      $sql = "SELECT * FROM Staff WHERE Forename = :forename AND Surname = :surname";
       $stmt = $this->pdo->prepare($sql);
 
-      $stmt->bindValue(':username', $username);
+      $stmt->bindValue(':forename', $forename);
+      $stmt->bindValue(':surname', $surname);
 
       $stmt->execute();
 
@@ -27,11 +28,18 @@
         echo "<script> alert('Sorry, that user already exists.')</script>";
       }
       else {
-        $sqlInsert = "INSERT INTO Staff(Forename, Surname, Password, Age) VALUES('$forename', '$surname', '$passwordHash', '$age')";
+        // Create Username
+        $year = substr($age, 2, 2);
+        $username = substr($surname, 0, 3).$forename[0].$year;
+        $username = strtolower($username);
+
+        // Insert User into Database
+        $sqlInsert = "INSERT INTO Staff(Forename, Surname, Username, Password, Age) VALUES('$forename', '$surname', '$username', '$passwordHash', '$age')";
         $stmt = $this->pdo->prepare($sqlInsert);
 
         $stmt->execute();
 
+        // Log user in
         $_SESSION['username'] = $user['username'];
         header('Location: index.php');
       }

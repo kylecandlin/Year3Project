@@ -5,7 +5,7 @@
 
   if(isset($_POST['submitButton'])){
     $user = new StaffFunctions($pdo);
-    $user->SignIn($_POST['surname'], $_POST['password']);
+    $user->SignIn($_POST['username'], $_POST['password']);
   }
 ?>
 <html lang="en">
@@ -33,10 +33,10 @@
     <section class="content">
       <form action="" method="post" id="loginForm">
         <h1> Staff Login </h1>
-        <input name="surname" class="input-button" type="text" placeholder="Surname" />
+        <input name="username" class="input-button" type="text" placeholder="Username" />
         <input name="password" class="input-button" type="text" placeholder="Password" />
         <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Log In"/>
-        <p><a href="register.php"> Create staff account here. </a></p>
+        <p><a href="staffRegister.php"> Create staff account here. </a></p>
       </form>
     </section>
     <?php include 'Includes/footer.php'; ?>

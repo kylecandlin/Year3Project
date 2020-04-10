@@ -39,25 +39,31 @@
   font-weight: 400;
   margin: 15px;
   color: #413c3c;
-  min-width: 445px;
 }
 
 #event-btn {
-  background: #fff0e6;
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 1px 4px 0 #00000033, 0 6px 20px 6px #0000002E;
+  width: 215px;
 }
 
 #event-btn a {
   display: block;
+  background: #fff0e6;
+  border-radius: 15px;
+  box-shadow: 0 1px 4px 0 #00000033, 0 6px 20px 6px #0000002E;
   padding: 20px 30px;
   font-weight: 200;
   font-size: 24px;
   text-align: center;
   color: #413c3c;
+  transition: ease-in-out, 0.5s;
+}
+
+#event-btn a:hover {
+  background: #fbf7f4;
+  text-decoration: none;
 }
 
 /* Adjusts Content Section to Overlap Top-Container */
@@ -80,13 +86,17 @@
   .top-container {
     grid-template-rows: auto 500px;
   }
+
+  .header-content section {
+    width: 60%;
+  }
 }
 
 /* Adjusts size of top container, stops content section from overlapping and removes border,
    ensures Login/Account button stays visible */
 @media only screen and (max-width: 850px) {
   .top-container {
-    grid-template-rows: auto 200px;
+    grid-template-rows: auto 250px;
     border-radius: 0;
   }
 
@@ -104,6 +114,15 @@
   #pub-title-header {
     display: none;
     visibility: hidden;
+  }
+
+  .header-content section {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  #event-btn a {
+    margin: 0;
   }
 
   .content {

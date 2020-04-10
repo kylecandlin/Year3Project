@@ -10,6 +10,8 @@ USE pub;
 -- Create Customer table --
 CREATE TABLE Customer (
   CustomerID INT(3) NOT NULL AUTO_INCREMENT,
+  Forename VARCHAR(50) NOT NULL,
+  Surname VARCHAR(50) NOT NULL,
   Username VARCHAR(20) NOT NULL,
   Password VARCHAR(255) NOT NULL,
   Age DATE NOT NULL,
@@ -30,6 +32,7 @@ CREATE TABLE Staff (
   StaffID INT(3) NOT NULL AUTO_INCREMENT,
   Forename VARCHAR(50) NOT NULL,
   Surname VARCHAR(50) NOT NULL,
+  Username VARCHAR(20) NOT NULL,
   Password VARCHAR(255) NOT NULL,
   Age DATE NOT NULL,
   CONSTRAINT PK_Staff PRIMARY KEY(StaffID)
