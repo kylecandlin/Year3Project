@@ -2,6 +2,11 @@
   include 'Includes/connect.php';
   include 'Includes/sessionStart.php';
   include 'Includes/eventList.php';
+
+  if(isset($_POST['submit-button'])) {
+    $event = new eventList($pdo);
+    $event->addEvent($_POST['name'], $_POST['date'], $_POST['desc'], $_SESSION['username']);
+  }
 ?>
 <html lang="en">
 <head>
@@ -30,16 +35,13 @@
   <section class="container">
     <section class="content">
       <form method="post" action="">
-        <section id="event-grid">
-          <?php
-            $data = new eventList($pdo);
-            $data->outputAll();
-          ?>
-        </section>
-        <a id="submit-button" class="input-button" href="addEvent.php">Add new Event</a>
+        <input name="name" class="input-button" maxlength="20" type="text" placeholder="Event name  (max: 20)" value="Event" />
+        <input id="date" name="date" class="input-button" type="datetime-local" />
+        <textarea name="desc" class="input-button" maxlength="1000" type="text" placeholder="Description  (max: 1000)">This is an event Description</textarea>
+        <input id="submit-button" name="submit-button" class="input-button" type="submit" value="Add Event" />
       </form>
     </section>
-    <?php include 'Includes/footer.php'; ?>
-    </section>
+  <?php include 'Includes/footer.php'; ?>
+  </section>
 </body>
 </html>

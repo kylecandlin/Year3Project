@@ -40,7 +40,7 @@
         $stmt->execute();
 
         // Log user in
-        $_SESSION['username'] = $user['username'];
+        $_SESSION['username'] = $username;
         header('Location: index.php');
       }
     }

@@ -24,21 +24,22 @@ form h1 {
 }
 
 .input-button {
+  font-family: 'Quicksand', sans-serif;
   border: 1px black solid;
   width: 60%;
   max-width: 600px;
-  min-width: 320px;
   display: block;
-  text-align: center;
   margin: 1% auto;
   font-size: 20px;
   border-radius: 15px;
   padding: 10px 15px;
   outline: none;
+  text-decoration: none;
 }
 
 .input-button:hover, .input-button:active {
   border: 1px #666 solid;
+  text-decoration: none;
 }
 
 ::-webkit-inner-spin-button {
@@ -46,14 +47,15 @@ form h1 {
 }
 
 #submit-button {
-  background: linear-gradient(#3385FFB3, #3385FFE6);
+  background: linear-gradient(#6fa9ff, #4892ff);
   color: white;
   border: none;
   margin-top: 2%;
+  transition: ease-in-out, 0.5s;
 }
 
 #submit-button:hover {
-  background: linear-gradient(#3385FFA6, #3385FFD9);
+  background: linear-gradient(#78b4ff, #559cff);
 }
 
 form p {

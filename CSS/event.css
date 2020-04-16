@@ -1,0 +1,66 @@
+form h1 {
+  width: auto;
+  font-size: inherit;
+  margin: auto;
+  padding-bottom: inherit;
+  border-bottom: none;
+}
+
+#event-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.event-container {
+  border: 0.5px solid #666;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 30px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-header {
+  font-size: 36px;
+  margin: 20px 0 0 0;
+}
+
+.event-subheader {
+  font-size: 24px;
+  margin: 5px;
+}
+
+.event-text {
+  font-size: 16px;
+  font-weight: 100;
+  height: auto;
+}
+
+#text-fade {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 40px 0;
+  background-image: linear-gradient(to bottom, transparent, white);
+}
+
+#view-event-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto
+  min-width: 0;
+  background: linear-gradient(#6fa9ff, #4892ff);
+  color: white;
+  border: none;
+}
+
+#view-event-btn:hover {
+  background: linear-gradient(#78b4ff, #559cff);
+}

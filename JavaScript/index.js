@@ -39,6 +39,10 @@ $(document).ready(function(){
     $("#nav-login a").text(userID);
     $("#nav-login a").attr("href", "account.php");
   }
+  else if(staffID != null) {
+    $("#nav-login a").text(staffID);
+    $("#nav-login a").attr("href", "account.php");
+  }
   else {
     $("#nav-login a").text("Login");
     $("#nav-login a").attr("href", "login.php");

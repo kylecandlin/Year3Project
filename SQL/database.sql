@@ -18,24 +18,26 @@ CREATE TABLE Customer (
   CONSTRAINT PK_Customer PRIMARY KEY(CustomerID)
 );
 
--- Create Events table --
-CREATE TABLE Event (
-  EventID INT(3) NOT NULL AUTO_INCREMENT,
-  Name VARCHAR(20) NOT NULL,
-  Details DATETIME,
-  Description VARCHAR(255),
-  CONSTRAINT PK_Event PRIMARY KEY(EventID)
-);
-
 -- Create Staff table --
 CREATE TABLE Staff (
   StaffID INT(3) NOT NULL AUTO_INCREMENT,
   Forename VARCHAR(50) NOT NULL,
   Surname VARCHAR(50) NOT NULL,
-  Username VARCHAR(20) NOT NULL,
+  Username CHAR(6) NOT NULL,
   Password VARCHAR(255) NOT NULL,
   Age DATE NOT NULL,
   CONSTRAINT PK_Staff PRIMARY KEY(StaffID)
+);
+
+-- Create Events table --
+CREATE TABLE Event (
+  EventID INT(3) NOT NULL AUTO_INCREMENT,
+  StaffID INT(3) NOT NULL,
+  Name VARCHAR(20) NOT NULL,
+  Details DATETIME,
+  Description VARCHAR(1000),
+  CONSTRAINT PK_Event PRIMARY KEY(EventID),
+  CONSTRAINT FK_EventStaff FOREIGN KEY(StaffID) REFERENCES Staff(StaffID)
 );
 
 -- Create table to link Customers and Staff to Events --
