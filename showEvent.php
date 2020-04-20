@@ -29,15 +29,10 @@
   </section>
   <section class="container">
     <section class="content">
-      <form method="post" action="">
-        <section id="event-grid">
-          <?php
-            $data = new eventList($pdo);
-            $data->outputAll();
-          ?>
-        </section>
-        <a id="submit-button" name='view-event' class="input-button" href="addEvent.php">Add new Event</a>
-      </form>
+      <?php
+        $event = new eventList($pdo);
+        $event->outputSingle($_SESSION['eventID']);
+      ?>
     </section>
     <?php include 'Includes/footer.php'; ?>
     </section>
