@@ -37,7 +37,7 @@
         <h1> Login </h1>
         <input id="username" name="username" class="input-button" type="text" placeholder="Username" />
         <input id="password" name="password" class="input-button" type="text" placeholder="Password" />
-        <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Login"/>
+        <input name="submitButton" class="submit-button input-button" type="submit" value="Login"/>
         <p> No account? <a href="register.php"> Create one here. </a></p>
       </form>
     </section>

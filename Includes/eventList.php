@@ -18,6 +18,7 @@
         echo "<section class='event-container'>";
         echo "<h1 class='event-header'>".$row['Name']."</h1>";
         echo "<h1 class='event-subheader'>".$details."</h1>";
+        echo "<h1 class='event-subheader'>£".$row['Price']." pp</h1>";
         echo "<p class='event-text'>".$row['Description']."</p>";
         echo "<p id='text-fade'></p>";
         echo "<input id='view-event-btn' name='".$row['EventID']."' class='input-button'
@@ -42,6 +43,7 @@
 
       echo "<h1 class='event-header'>".$event['Name']."</h1>";
       echo "<h1 class='event-subheader'>".$event['Details']."</h1>";
+      echo "<h1 class='event-subheader'>£".$event['Price']." pp</h1>";
       echo "<p class='event-text'>".$event['Description']."</p>";
     }
 

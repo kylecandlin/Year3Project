@@ -29,12 +29,31 @@
   </section>
   <section class="container">
     <section class="content">
-      <?php
-        $event = new eventList($pdo);
-        $event->outputSingle($_SESSION['eventID']);
-      ?>
+      <section id="show-event-container">
+        <?php
+          $event = new eventList($pdo);
+          $event->outputSingle($_SESSION['eventID']);
+        ?>
+        <input id="register-attendance" class="submit-button input-button" type="submit" value='Register Attendance' />
+        <section class="dropdown">
+          <section class="select">
+            <span>Number of People: </span>
+          </section>
+          <ul class="dropdown-menu">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul>
+        </section>
+      </section>
     </section>
-    <?php include 'Includes/footer.php'; ?>
-    </section>
+  <?php include 'Includes/footer.php'; ?>
+  </section>
 </body>
 </html>

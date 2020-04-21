@@ -36,7 +36,7 @@
             $data->outputAll();
           ?>
         </section>
-        <a id="submit-button" name='view-event' class="input-button" href="addEvent.php">Add new Event</a>
+        <a name='view-event' class="submit-button input-button" href="addEvent.php">Add new Event</a>
       </form>
     </section>
     <?php include 'Includes/footer.php'; ?>

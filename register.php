@@ -41,7 +41,7 @@
         <p id="passwordCheck"></p>
         <input id="DOB" name="DOB" class="input-button" type="date" />
         <p id="dobCheck" class="validCheck"></p>
-        <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Create Account"/>
+        <input name="submitButton" class="submit-button input-button" type="submit" value="Create Account"/>
         <p> Already have an account? <a href="login.php"> Log in here. </a></p>
       </form>
     </section>

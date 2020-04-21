@@ -38,7 +38,7 @@
         <input name="surname" class="input-button" type="text" placeholder="Surname" />
         <input name="password" class="input-button" type="text" placeholder="Password" />
         <input id="DOB" name="DOB" class="input-button" type="date" />
-        <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Create Account"/>
+        <input name="submitButton" class="submit-button input-button" type="submit" value="Create Account"/>
         <p> Already have an account? <a href="login.php"> Log in here. </a></p>
       </form>
     </section>

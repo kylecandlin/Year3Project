@@ -38,7 +38,7 @@
         <input name="name" class="input-button" maxlength="20" type="text" placeholder="Event name  (max: 20)" value="Event" />
         <input id="date" name="date" class="input-button" type="datetime-local" />
         <textarea name="desc" class="input-button" maxlength="1000" type="text" placeholder="Description  (max: 1000)">This is an event Description</textarea>
-        <input id="submit-button" name="submit-button" class="input-button" type="submit" value="Add Event" />
+        <input name="submit-button" class="submit-button input-button" type="submit" value="Add Event" />
       </form>
     </section>
   <?php include 'Includes/footer.php'; ?>

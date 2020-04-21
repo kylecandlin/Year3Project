@@ -35,6 +35,7 @@ CREATE TABLE Event (
   StaffID INT(3) NOT NULL,
   Name VARCHAR(20) NOT NULL,
   Details DATETIME,
+  Price DOUBLE(5,2),
   Description VARCHAR(1000),
   CONSTRAINT PK_Event PRIMARY KEY(EventID),
   CONSTRAINT FK_EventStaff FOREIGN KEY(StaffID) REFERENCES Staff(StaffID)
@@ -44,6 +45,7 @@ CREATE TABLE Event (
 CREATE TABLE EventAttendance (
   EventID INT(3) NOT NULL,
   CustomerID INT(3) NOT NULL,
+  Quantity INT(1) NOT NULL,
   CONSTRAINT PK_EventAttendance PRIMARY KEY(EventID, CustomerID),
   CONSTRAINT FK_EventAttendanceEvent FOREIGN KEY(EventID) REFERENCES Event(EventID),
   CONSTRAINT FK_EventAttendanceCustomer FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID)

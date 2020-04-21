@@ -36,7 +36,7 @@
         <h1> Staff Login </h1>
         <input name="username" class="input-button" type="text" placeholder="Username" />
         <input name="password" class="input-button" type="text" placeholder="Password" />
-        <input id="submit-button" name="submitButton" class="input-button" type="submit" value="Log In"/>
+        <input name="submitButton" class="submit-button input-button" type="submit" value="Log In"/>
         <p><a href="staffRegister.php"> Create staff account here. </a></p>
       </form>
     </section>

@@ -31,7 +31,7 @@
 
         $stmt->execute();
 
-        $_SESSION['username'] = $user['username'];
+        $_SESSION['username'] = $username;
         header('Location: index.php');
       }
     }
