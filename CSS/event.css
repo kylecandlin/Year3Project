@@ -1,5 +1,6 @@
 #show-event-container {
-  display: block;
+  margin-top: 0px;
+  min-height: 500px;
 }
 
 form h1 {
@@ -67,4 +68,39 @@ form h1 {
 
 #view-event-btn:hover {
   background: linear-gradient(#78b4ff, #559cff);
+}
+
+.register-event ul {
+  width: 300px;
+  display: -webkit-flex;
+  margin: auto;
+  padding: 0;
+  margin-top: 2%;
+}
+
+.double-button {
+  width: 120px;
+  display: block;
+  margin: 0 0 5px 0;
+}
+
+#next {
+  float: right;
+  border-radius: 0 5px 5px 0;
+}
+
+#cancel {
+  float: left;
+  border-radius: 5px 0 0 5px;
+}
+
+#step-one, #step-two {
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 0 4px 0 #00000033;
+}
+
+#step-two {
+  padding: 5px;
+  text-align: center;
 }

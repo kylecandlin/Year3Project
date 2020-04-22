@@ -41,8 +41,13 @@
 
       $event = $stmt->fetch(PDO::FETCH_ASSOC);
 
+      $mysqldate = strtotime($event['Details']);
+      $date = date('jS M, yy', $mysqldate);
+      $time = date('h:ia', $mysqldate);
+
       echo "<h1 class='event-header'>".$event['Name']."</h1>";
-      echo "<h1 class='event-subheader'>".$event['Details']."</h1>";
+      echo "<h1 class='event-subheader'>".$date."</h1>";
+      echo "<h1 class='event-subheader'>".$time."</h1>";
       echo "<h1 class='event-subheader'>£".$event['Price']." pp</h1>";
       echo "<p class='event-text'>".$event['Description']."</p>";
     }

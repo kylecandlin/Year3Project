@@ -1,6 +1,8 @@
 $(document).ready(function(){
-  $("#submit-button").hide();
-  $(".dropdown").hide();
+  $(".register-event").show();
+  $(".register-event ul, #step-one, #step-two").each(function(){
+    $(this).hide();
+  })
 
   if(staffID != null){
     $("#submit-button").show();
@@ -10,8 +12,36 @@ $(document).ready(function(){
   }
 
   $("#register-attendance").click(function(){
-    $(this).attr("Value", "Cancel");
-    $(".dropdown").toggle();
+    $(this).toggle();
+    $(".register-event ul").show();
+    $("#step-one").show();
+  });
+
+  $("#cancel").click(function(){
+    $("#next").text("Next");
+    $("#step-one, #step-two, .register-event ul").each(function(){
+      $(this).hide();
+    });
+    $("#register-attendance").show();
+  });
+
+  $("#next").click(function(){
+    var nextText = $(this).text();
+    if(nextText == "Next") {
+      var dropdown = $(".dropdown span").text();
+      if(dropdown.replace(/[^0-9]/g, "").length < 1) {
+        $(".dropdown span").effect("bounce");
+      }
+      else {
+        $("#step-one").toggle();
+        $("#step-two").toggle();
+        $("#next").text("Finish");
+      }
+    }
+    else {
+      $(this).click(function(){
+      });
+    }
   });
 
   /*Dropdown Menu*/

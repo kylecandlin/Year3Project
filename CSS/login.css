@@ -87,7 +87,7 @@ span.msg, span.choose {
   width: 300px;
   border-radius: 5px;
   box-shadow: 0 0 2px rgb(204, 204, 204);
-  transition: all .5s ease-in-out;
+  transition: all .5s ease;
   position: relative;
   margin: auto;
   font-size: 14px;
@@ -98,12 +98,13 @@ span.msg, span.choose {
     cursor: pointer;
     display: block;
     padding: 10px;
+    max-height: 18px;
 }
 .dropdown .select > i {
     font-size: 13px;
     color: #888;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease;
     float: right;
     line-height: 20px;
 }
