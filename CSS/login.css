@@ -48,6 +48,7 @@ form h1 {
   border: none;
   margin-top: 2%;
   transition: ease-in-out, 0.5s;
+  cursor: pointer;
 }
 
 .submit-button:hover {

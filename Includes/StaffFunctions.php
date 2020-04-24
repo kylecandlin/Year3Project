@@ -40,7 +40,7 @@
         $stmt->execute();
 
         // Log user in
-        $_SESSION['username'] = $username;
+        $_SESSION['sUsername'] = $username;
         header('Location: index.php');
       }
     }
@@ -56,7 +56,7 @@
       $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
       if($user && password_verify($password.$this->salt, $user['Password'])){
-          $_SESSION['username'] = $user['Username'];
+          $_SESSION['sUsername'] = $user['Username'];
           header('Location: index.php');
       }
       else {

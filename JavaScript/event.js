@@ -1,14 +1,18 @@
 $(document).ready(function(){
-  $(".register-event").show();
-  $(".register-event ul, #step-one, #step-two").each(function(){
+  $("#login-request").hide();
+  $(".register-event ul, #step-one, #step-two, #event-add").each(function(){
     $(this).hide();
   })
 
-  if(staffID != null){
-    $("#submit-button").show();
+  if(staffID != ''){
+    $("#event-add").show();
   }
-  else {
-    $("#submit-button").hide();
+
+  if(staffID == '' && userID == '') {
+    $("#login-request").show();
+    $(".register-event, .register-event ul, #step-one, #register-attendance").each(function(){
+      $(this).hide();
+    });
   }
 
   $("#register-attendance").click(function(){
@@ -39,8 +43,14 @@ $(document).ready(function(){
       }
     }
     else {
-      $(this).click(function(){
-      });
+
+      // AJAX call to run function that inserts into EventAttendance
+      /*$(this).click(function(){
+        jQuery.ajax({
+          type: "POST",
+          url: "",
+        });
+      });*/
     }
   });
 

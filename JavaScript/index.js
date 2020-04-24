@@ -35,15 +35,15 @@ $(document).ready(function(){
   });
 
   /*** PHP Session Variable Handling ***/
-  if(userID != null) {
-    $("#nav-login a").text(userID);
-    $("#nav-login a").attr("href", "account.php");
-  }
-  else if(staffID != null) {
+  if(staffID != '') {
     $("#nav-login a").text(staffID);
     $("#nav-login a").attr("href", "account.php");
   }
-  else {
+  if(userID != '') {
+    $("#nav-login a").text(userID);
+    $("#nav-login a").attr("href", "account.php");
+  }
+  if(userID == '' && staffID == '') {
     $("#nav-login a").text("Login");
     $("#nav-login a").attr("href", "login.php");
   }

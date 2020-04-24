@@ -28,6 +28,7 @@
 
     function accountLogOut(){
       unset($_SESSION['username']);
+      unset($_SESSION['sUsername']);
       header('Location: index.php');
     }
 

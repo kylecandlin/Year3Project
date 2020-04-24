@@ -10,9 +10,9 @@
 ?>
 <html lang="en">
 <head>
-  <script>
-    var userID = '<?php echo $_SESSION['username']; ?>';
-    var staffID = '<?php echo $_SESSION['username']; ?>';
+  <script type="text/javascript">
+    var userID = '<?php echo $userID ?>';
+    var staffID = '<?php echo $staffID; ?>';
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

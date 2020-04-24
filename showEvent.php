@@ -5,9 +5,9 @@
 ?>
 <html lang="en">
 <head>
-  <script>
-    var userID = '<?php echo $_SESSION['username']; ?>';
-    var staffID = '<?php echo $_SESSION['username']; ?>';
+  <script type="text/javascript">
+    var userID = '<?php echo $userID ?>';
+    var staffID = "<?php echo $staffID; ?>";
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +38,9 @@
           $event = new eventList($pdo);
           $event->outputSingle($_SESSION['eventID']);
         ?>
+        <p id="login-request">
+          Please <a href="login.php">log in</a> to register for this event.
+        </p>
         <input id="register-attendance" class="submit-button input-button" type="submit" value='Register Attendance' />
         <section class="register-event">
           <ul>
