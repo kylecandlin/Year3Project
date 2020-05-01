@@ -46,6 +46,7 @@
           <ul>
             <li id="cancel" class="double-button submit-button input-button">Cancel</li>
             <li id="next" class="double-button submit-button input-button">Next</li>
+            <li id="finish" class="double-button submit-button input-button">Finish</li>
           </ul>
           <section id="step-one">
             <section class="dropdown">
@@ -66,10 +67,13 @@
             </section>
           </section>
           <section id="step-two">
-            By clicking finish you confirm that you understand all payments should
-            be presented in full at the door upon arrival of the event. Under no circumstances
-            will this website accept card payments.
-            <input type="checkbox" />
+            <p>
+              By ticking this box, you confirm that you have read the Terms and Conditions
+              and you understand all payments should be presented in full at the door
+              upon arrival of the event. Under no circumstances will this website accept card payments.
+            </br><input id="TandC" type="checkbox" />
+            </p>
+            <p id="error-report"></p>
           </section>
         </section>
       </section>

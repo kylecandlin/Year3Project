@@ -1,6 +1,5 @@
 $(document).ready(function(){
-  $("#login-request").hide();
-  $(".register-event ul, #step-one, #step-two, #event-add").each(function(){
+  $(".register-event ul, #step-one, #step-two, #event-add, #login-request, #finish").each(function(){
     $(this).hide();
   })
 
@@ -22,7 +21,8 @@ $(document).ready(function(){
   });
 
   $("#cancel").click(function(){
-    $("#next").text("Next");
+    $("#finish").hide();
+    $("#next").show();
     $("#step-one, #step-two, .register-event ul").each(function(){
       $(this).hide();
     });
@@ -30,28 +30,42 @@ $(document).ready(function(){
   });
 
   $("#next").click(function(){
-    var nextText = $(this).text();
-    if(nextText == "Next") {
-      var dropdown = $(".dropdown span").text();
-      if(dropdown.replace(/[^0-9]/g, "").length < 1) {
-        $(".dropdown span").effect("bounce");
-      }
-      else {
-        $("#step-one").toggle();
-        $("#step-two").toggle();
-        $("#next").text("Finish");
-      }
+    var dropdown = $(".dropdown span").text();
+    if(dropdown.replace(/[^0-9]/g, "").length < 1) {
+      $(".dropdown span").effect("bounce");
     }
     else {
-
-      // AJAX call to run function that inserts into EventAttendance
-      /*$(this).click(function(){
-        jQuery.ajax({
-          type: "POST",
-          url: "",
-        });
-      });*/
+      $("#step-one").toggle();
+      $("#step-two").toggle();
+      $(this).hide();
+      $("#finish").show();
     }
+  });
+
+  $("#finish").click(function(){
+    var qty = $(".dropdown span").text();
+
+    if ($("#TandC").is(":checked")) {
+      // AJAX call to run function that inserts into EventAttendance
+      $.ajax({
+        type: 'POST',
+        url: 'eventAttend.php',
+        data: {quantity: qty},
+        success: function(data){
+          console.log(data);
+          if(data == '0'){
+            $("#error-report").text("You have already registered for this event. You cannot register again.");
+          }
+          else if(data == '1'){
+            location.replace('event.php');
+          }
+        }
+      });
+    }
+    else {
+      $("#error-report").text("You must read the Terms and Conditions before registering.");
+    }
+
   });
 
   /*Dropdown Menu*/

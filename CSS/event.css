@@ -83,13 +83,11 @@ form h1 {
   margin: 0 0 5px 0;
 }
 
-#next {
-  float: right;
+#next, #finish {
   border-radius: 0 5px 5px 0;
 }
 
 #cancel {
-  float: left;
   border-radius: 5px 0 0 5px;
 }
 
@@ -102,4 +100,10 @@ form h1 {
 #step-two {
   padding: 5px;
   text-align: center;
+  font-size: 14px;
+}
+
+#error-report {
+  margin: 5px;
+  color: red;
 }

@@ -41,7 +41,7 @@ CREATE TABLE Event (
   CONSTRAINT FK_EventStaff FOREIGN KEY(StaffID) REFERENCES Staff(StaffID)
 );
 
--- Create table to link Customers and Staff to Events --
+-- Create table to link Customers to Events --
 CREATE TABLE EventAttendance (
   EventID INT(3) NOT NULL,
   CustomerID INT(3) NOT NULL,
