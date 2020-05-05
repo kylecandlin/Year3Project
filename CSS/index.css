@@ -57,6 +57,7 @@ a:hover {
   position: fixed;
   transition: ease-in-out, 0.5s;
   background: white;
+  z-index: 1;
 }
 
 #nav-button, #nav-menu {

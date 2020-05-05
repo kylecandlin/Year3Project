@@ -1,8 +1,11 @@
 <?php
+  // includes required pages
+
   include 'Includes/connect.php';
   include 'Includes/sessionStart.php';
   include 'Includes/StaffFunctions.php';
 
+  // on click call staff login function
   if(isset($_POST['submitButton'])){
     $user = new StaffFunctions($pdo);
     $user->SignIn($_POST['username'], $_POST['password']);
@@ -10,6 +13,7 @@
 ?>
 <html lang="en">
 <head>
+  <!-- Assigns a JavaScript variable to a $_SESSION value -->
   <script type="text/javascript">
     var userID = '<?php echo $userID ?>';
     var staffID = "<?php echo $staffID; ?>";
@@ -17,9 +21,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
+  <!-- CSS links -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css">
   <link rel="stylesheet" href="CSS/login.css?version=4" type="text/css">
+  <!-- JavaScript links -->
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -28,10 +34,12 @@
 </head>
 <body>
   <section class="top-container">
+    <!-- navigation bar and menu -->
     <?php include 'Includes/navigationPanel.php'; ?>
   </section>
   <section class="container">
     <section class="content">
+      <!-- login form -->
       <form action="" method="post" id="loginForm">
         <h1> Staff Login </h1>
         <input name="username" class="input-button" type="text" placeholder="Username" />
@@ -40,6 +48,7 @@
         <p><a href="staffRegister.php"> Create staff account here. </a></p>
       </form>
     </section>
+    <!-- page footer -->
     <?php include 'Includes/footer.php'; ?>
   </section>
 </body>

@@ -1,14 +1,18 @@
 <?php
   /**
-   *
+   * Defines functions that are used on the account page of the website. These functions
+   * will show account data of the logged in user, show their registered events and
+   * can log them out.
    */
   class AccountDetails {
     protected $pdo = null;
 
+    // Constructor
     function __construct($pdo) {
       $this->pdo = $pdo;
     }
 
+    // Shows account details of logged in user
     function showAccount(){
       $sql = "SELECT CustomerID, Username, Age FROM Customer WHERE Username = :username";
       $stmt = $this->pdo->prepare($sql);
@@ -17,6 +21,7 @@
 
       $stmt->execute();
 
+      // Displays details
       while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<h1> Account Details </h1>";
         echo "<table id='account-details' class='account-details-table'>";
@@ -26,12 +31,14 @@
       }
     }
 
+    // Logs out user
     function accountLogOut(){
       unset($_SESSION['username']);
       unset($_SESSION['sUsername']);
       header('Location: index.php');
     }
 
+    // Shows events user is registered too
     function showEvent(){
       $sql = "SELECT Name, Details, Description
                 FROM Event
@@ -44,6 +51,7 @@
 
       $stmt->execute();
 
+      // Displays event details
       while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         $mysqldate = strtotime($row['Details']);
         $details = date('jS M, yy - h:ia', $mysqldate);
@@ -57,5 +65,4 @@
       }
     }
   }
-
 ?>

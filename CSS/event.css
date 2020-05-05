@@ -1,3 +1,5 @@
+/*** Event Stylesheet used across event based pages ***/
+/* Main section where events are shown */
 #show-event-container {
   margin-top: 0px;
   min-height: 500px;
@@ -11,12 +13,15 @@ form h1 {
   border-bottom: none;
 }
 
+/*** Event Styling ***/
+/* Organisation on the Page */
 #event-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
 
+/* Individual box styling */
 .event-container {
   border: 0.5px solid #666;
   padding: 10px;
@@ -26,6 +31,7 @@ form h1 {
   height: 300px;
   overflow: hidden;
   position: relative;
+  z-index: 0;
 }
 
 .event-header {
@@ -44,6 +50,7 @@ form h1 {
   height: auto;
 }
 
+/* Creates a fade at the bottom of the section */
 #text-fade {
   position: absolute;
   left: 0;
@@ -69,6 +76,8 @@ form h1 {
   background: linear-gradient(#78b4ff, #559cff);
 }
 
+/*** Registration form ***/
+/* Buttons used in the registration form */
 .register-event ul {
   width: 300px;
   display: -webkit-flex;
@@ -77,6 +86,7 @@ form h1 {
   margin-top: 2%;
 }
 
+/* makes buttons appear side-by-side with no spacing between */
 .double-button {
   width: 120px;
   display: block;
@@ -91,6 +101,7 @@ form h1 {
   border-radius: 5px 0 0 5px;
 }
 
+/* Sections for displaying tasks to the user */
 #step-one, #step-two {
   width: 300px;
   margin: auto;
@@ -103,7 +114,30 @@ form h1 {
   font-size: 14px;
 }
 
-#error-report {
-  margin: 5px;
+/* Sectiosn that show error statuses to the user */
+#error-report, #login-request {
+  margin: 10px 5px;
   color: red;
+}
+
+/** Media Queries **/
+/* When the page is below 850px, add padding */
+@media only screen and (max-width: 850px){
+  #show-event-container{
+    padding: 0 20px;
+  }
+}
+
+/* When the page is between 550px and 1000px, change grid template */
+@media only screen and (min-width: 550px) and (max-width: 1000px){
+  #event-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* When the page is below 549px, chnage the grid template */
+@media only screen and (max-width: 549px) {
+  #event-grid {
+    grid-template-columns: 1fr;
+  }
 }

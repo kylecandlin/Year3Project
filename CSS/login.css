@@ -1,3 +1,4 @@
+/* Edit header styling */
 #pub-title-nav {
   display: block;
   position: absolute;
@@ -13,6 +14,7 @@ form h1 {
   border-bottom: 1px black solid;
 }
 
+/* Styling all input elements */
 .input-button {
   font-family: 'Quicksand', sans-serif;
   border: 1px black solid;
@@ -27,20 +29,17 @@ form h1 {
   text-decoration: none;
 }
 
-.input-button option {
-  outline: none;
-  border: none;
-}
-
 .input-button:hover, .input-button:active {
   border: 1px #666 solid;
   text-decoration: none;
 }
 
+/* Date picker styling */
 ::-webkit-inner-spin-button {
   display: none;
 }
 
+/* Styling for submit buttons */
 .submit-button {
   background: linear-gradient(#6fa9ff, #4892ff);
   color: white;
@@ -56,6 +55,7 @@ form h1 {
   border: none;
 }
 
+/* Styling for form text */
 form p {
   display: block;
   margin: 2% auto;
@@ -65,42 +65,41 @@ form p {
 
 form p a {
   text-decoration: none;
-  color: rgb(51, 133, 255);
 }
 
 form p a:hover {
   text-decoration: underline;
 }
 
+/* Error reporting to user */
 .validCheck {
   color: red;
   margin: 0;
 }
 
-/*Styling Selectbox*/
-span.msg, span.choose {
-  color: #555;
-  padding: 5px 0 10px;
-  display: inherit;
-}
-
+/*** Selectbox styling ***/
+/* Main section */
 .dropdown {
   width: 300px;
   border-radius: 5px;
-  box-shadow: 0 0 2px rgb(204, 204, 204);
-  transition: all .5s ease;
+  box-shadow: 0 0 2px #CCCCCC;
+  transition: all 0.5s ease-in-out;
   position: relative;
   margin: auto;
   font-size: 14px;
   color: #474747;
   text-align: left;
 }
+
+/* Select section that displays values and can be clicked */
 .dropdown .select {
     cursor: pointer;
     display: block;
     padding: 10px;
     max-height: 18px;
 }
+
+/* > targets direct children of select that use the i element */
 .dropdown .select > i {
     font-size: 13px;
     color: #888;
@@ -109,21 +108,22 @@ span.msg, span.choose {
     float: right;
     line-height: 20px;
 }
+
 .dropdown:hover {
     box-shadow: 0 0 4px rgb(204, 204, 204);
 }
+
 .dropdown:active {
     background-color: #f8f8f8;
 }
-.dropdown.active:hover,
-.dropdown.active {
+
+.dropdown.active:hover, .dropdown.active {
     box-shadow: 0 0 4px rgb(204, 204, 204);
     border-radius: 5px 5px 0 0;
     background-color: #f8f8f8;
 }
-.dropdown.active .select > i {
-    transform: rotate(-90deg);
-}
+
+/* Menu of options displayed */
 .dropdown .dropdown-menu {
     position: absolute;
     background-color: #fff;
@@ -138,22 +138,27 @@ span.msg, span.choose {
     overflow-y: auto;
     z-index: 9;
 }
+
 .dropdown .dropdown-menu li {
     padding: 10px;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
+
 .dropdown .dropdown-menu {
     padding: 0;
     list-style: none;
 }
+
 .dropdown .dropdown-menu li:hover {
     background-color: #f2f2f2;
 }
+
 .dropdown .dropdown-menu li:active {
     background-color: #e2e2e2;
 }
 
+/* When page width < 850px, change title and input button styling */
 @media only screen and (max-width: 850px) {
   #pub-title-nav {
     position: relative;

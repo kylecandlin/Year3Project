@@ -14,14 +14,11 @@ $("document").ready(function(){
   $("#submit-button").attr('disabled', true);
   $("#submit-button").css('background', 'grey');
 
+  /*** Functions ***/
   // Checks password length
   function passwordLenCheck(password){
     if (password.length < 8) {
       $($lenCheck).text("Must be at least 8 characters long.");
-      lenCheckBool = false;
-    }
-    else if (password.length = 0) {
-      $($lenCheck).text("Please enter a username.");
       lenCheckBool = false;
     }
     else {
@@ -30,6 +27,7 @@ $("document").ready(function(){
     }
   }
 
+  // Checks password for capital letters
   function passwordCharCheck(password){
     if (password.replace(/[^A-Z]/g, "").length < 1) {
       $($charCheck).text("Must include a capital letter.");
@@ -41,6 +39,7 @@ $("document").ready(function(){
     }
   }
 
+  // Checks password for numbers
   function passwordNumCheck(password){
     if (password.replace(/[^0-9]/g, "").length < 1) {
       $($numCheck).text("Must include a number.");
@@ -52,10 +51,13 @@ $("document").ready(function(){
     }
   }
 
+  // Checks that all criteria is met so prfile can be created
   function buttonClickable(){
-    console.log(lenCheckBool);
-    console.log(charCheckBool);
-    console.log(numCheckBool);
+    console.log("Password:" +  "\n" + ""
+                  +  "\n" + "Length: " + lenCheckBool
+                  +  "\n" + "Capital: " + charCheckBool
+                  +  "\n" + "Number: " + numCheckBool
+                  +  "\n" + "");
 
     if (lenCheckBool && charCheckBool && numCheckBool){
       $("#submit-button").attr('disabled', false);
@@ -68,13 +70,14 @@ $("document").ready(function(){
     }
   }
 
+  // AJAX call that is called when the password field changes
   $("#password").keyup(function(){
     var password = $(this).val();
 
     $.ajax({
       type:"POST",
       data:({
-        username: password
+        password: password
       }),
       datatype: "text",
       success: function(){

@@ -1,6 +1,7 @@
 <?php
   /**
-   *
+   * Defines functions that are used to insert data into the EventAttendance entity
+   * in the pub DB
    */
   class EventRegister
   {
