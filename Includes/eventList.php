@@ -62,7 +62,7 @@
     }
 
     // Adds event to Event entity in pub DB
-    public function addEvent($name, $date, $desc, $username) {
+    public function addEvent($name, $date, $desc, $price, $username) {
       $checkExists = "SELECT Name FROM event WHERE Name = :name";
       $stmt = $this->pdo->prepare($checkExists);
 
@@ -80,7 +80,7 @@
       else {
         $ID = $this->getStaffID($username);
 
-        $sqlInsert = "INSERT INTO Event(StaffID, Name, Details, Description) VALUES('$ID', '$name', '$date', '$desc')";
+        $sqlInsert = "INSERT INTO Event(StaffID, Name, Details, Price, Description) VALUES('$ID', '$name', '$date', '$price', '$desc')";
         $stmt = $this->pdo->prepare($sqlInsert);
 
         $stmt->execute();

@@ -31,7 +31,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="JavaScript/index.js"></script>
-
+  <script src="JavaScript/validation.js"></script>
 </head>
 <body>
   <section class="top-container">
@@ -46,6 +46,7 @@
         <input name="forename" class="input-button" type="text" placeholder="Forename" />
         <input name="surname" class="input-button" type="text" placeholder="Surname" />
         <input name="password" class="input-button" type="text" placeholder="Password" />
+        <p id="passwordCheck"></p>
         <input id="DOB" name="DOB" class="input-button" type="date" />
         <input name="submitButton" id="submit-button" class="submit-button input-button" type="submit" value="Create Account"/>
         <p> Already have an account? <a href="login.php"> Log in here. </a></p>
