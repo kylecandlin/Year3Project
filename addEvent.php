@@ -8,7 +8,7 @@
   // on click call add event function
   if(isset($_POST['submit-button'])) {
     $event = new eventList($pdo);
-    $event->addEvent($_POST['name'], $_POST['date'], $_POST['desc'], $_SESSION['username']);
+    $event->addEvent($_POST['name'], $_POST['date'], $_POST['desc'], $_SESSION['sUsername']);
   }
 ?>
 <html lang="en">
