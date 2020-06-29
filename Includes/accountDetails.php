@@ -51,18 +51,22 @@
 
       $stmt->execute();
 
+      // Displays table to show data
+      echo "<h1> Event Details </h1>";
+      echo "<table class='account-details-table'>";
+      echo "<tr><th>Name</th> <th>Details</th> <th>Description</th></tr>";
+
       // Displays event details
       while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         $mysqldate = strtotime($row['Details']);
         $details = date('jS M, yy - h:ia', $mysqldate);
 
-        echo "<h1> Event Details </h1>";
-        echo "<table class='account-details-table'>";
-        echo "<tr><th>Name</th> <th>Details</th> <th>Description</th></tr>";
         echo "<tr><td>".$row['Name']."</td>";
         echo "<td>".$details."</td>";
-        echo "<td>".$row['Description']."</td></tr></table>";
+        echo "<td>".$row['Description']."</td></tr>";
       }
+
+      echo "</table>";
     }
   }
 ?>

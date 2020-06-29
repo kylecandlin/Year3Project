@@ -44,7 +44,6 @@
       <form action="" method="post" id="registerForm">
         <h1> Register </h1>
         <input name="username" class="input-button" type="text" placeholder="Username" />
-        <p id="usernameCheck"></p>
         <input id="password" name="password" class="input-button" type="text" placeholder="Password" />
         <p id="passwordCheck"></p>
         <input id="DOB" name="DOB" class="input-button" type="date" />

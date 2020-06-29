@@ -51,6 +51,24 @@ $("document").ready(function(){
     }
   }
 
+  // Checks age
+  /*function ageCheck(dob){
+    var today = new Date().format('m-d-Y');
+
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms);
+
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+
+    if ((age-today) < 18){
+      $("#dobCheck").text("Must include a number.");
+      numCheckBool = false;
+    }
+    else {
+
+    }
+  }*/
+
   // Checks that all criteria is met so prfile can be created
   function buttonClickable(){
     console.log("Password:" +  "\n" + ""

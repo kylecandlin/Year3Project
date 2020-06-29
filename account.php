@@ -26,7 +26,6 @@
   <!-- CSS links -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/index.css?version=9" type="text/css" />
-  <link rel="stylesheet" href="CSS/infoBox.css" type="text/css" />
   <link rel="stylesheet" href="CSS/account.css" type="text/css" />
   <!-- JavaScript links -->
   <script
