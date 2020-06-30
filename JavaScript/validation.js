@@ -89,6 +89,7 @@ $("document").ready(function(){
                   +  "\n" + "Age: " + ageCheckBool
                   +  "\n" + "");
 
+    // if criteria is met
     if (lenCheckBool && charCheckBool && numCheckBool && ageCheckBool){
       $("#submit-button").attr('disabled', false);
       $("#submit-button").css('background',

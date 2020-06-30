@@ -213,7 +213,7 @@ a:hover {
   font-style: italic;
 }
 
-.footer-contact-icon, .footer-media-icon {
+.footer-contact-icon{
   float: left;
   background-color: #32373c;
   width: 40px;
@@ -228,9 +228,10 @@ a:hover {
   border-radius: 50%;
 }
 
-.footer-media-icon {
-  border-radius: 2px;
-  margin: 10px 5px;
+.footer-contact-icon img {
+  display: block;
+  margin: 20% auto;
+  width: 50%;
 }
 
 #footer-company-location, #footer-company-phone, #footer-company-email {
