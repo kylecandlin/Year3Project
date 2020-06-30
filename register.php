@@ -8,7 +8,7 @@
   // on click call user registration function
   if(isset($_POST['submitButton'])){
     $User = new UserFunctions($pdo);
-    $User->CreateUser($_POST['username'], $_POST['password']);
+    $User->CreateUser($_POST['forename'], $_POST['surname'], $_POST['username'], $_POST['password'], $_POST['DOB']);
   }
 ?>
 <html lang="en">
@@ -43,6 +43,8 @@
       <!-- registration form -->
       <form action="" method="post" id="registerForm">
         <h1> Register </h1>
+        <input name="forename" class="input-button" type="text" placeholder="Forename" />
+        <input name="surname" class="input-button" type="text" placeholder="Surname" />
         <input name="username" class="input-button" type="text" placeholder="Username" />
         <input id="password" name="password" class="input-button" type="text" placeholder="Password" />
         <p id="passwordCheck"></p>

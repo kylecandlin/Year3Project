@@ -4,6 +4,7 @@ $("document").ready(function(){
   var lenCheckBool = false;
   var charCheckBool = false;
   var numCheckBool = false;
+  var ageCheckBool = false;
 
   // Elements to display criteria to be met by user
   var $lenCheck = $("<p/>").addClass("validCheck");
@@ -15,7 +16,8 @@ $("document").ready(function(){
   $("#submit-button").css('background', 'grey');
 
   /*** Functions ***/
-  // Checks password length
+  /** Password Functions **/
+  // Checks length
   function passwordLenCheck(password){
     if (password.length < 8) {
       $($lenCheck).text("Must be at least 8 characters long.");
@@ -27,7 +29,7 @@ $("document").ready(function(){
     }
   }
 
-  // Checks password for capital letters
+  // Checks for capital letters
   function passwordCharCheck(password){
     if (password.replace(/[^A-Z]/g, "").length < 1) {
       $($charCheck).text("Must include a capital letter.");
@@ -39,7 +41,7 @@ $("document").ready(function(){
     }
   }
 
-  // Checks password for numbers
+  // Checks for numbers
   function passwordNumCheck(password){
     if (password.replace(/[^0-9]/g, "").length < 1) {
       $($numCheck).text("Must include a number.");
@@ -51,33 +53,43 @@ $("document").ready(function(){
     }
   }
 
-  // Checks age
-  /*function ageCheck(dob){
-    var today = new Date().format('m-d-Y');
+  // Checks age is >= 18
+  function ageCheck(dob){
 
-    var diff_ms = Date.now() - dob.getTime();
-    var age_dt = new Date(diff_ms);
+    // setting dates
+    dob = new Date(dob);
+    var today = new Date(Date.now());
 
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
+    // calculates dates and sets result as a date
+    var yearsDiff = today - dob;
+    yearsDiff = new Date(yearsDiff)
 
-    if ((age-today) < 18){
-      $("#dobCheck").text("Must include a number.");
-      numCheckBool = false;
+    // calculates year difference using milliseconds counted from 01/01/1970 00:00:00 UTC
+    var age = Math.abs(yearsDiff.getUTCFullYear() - 1970);
+    console.log("Age: " + age);
+
+    if (age < 18){
+      $("#dobCheck").text("You must be over 18 to use this site.");
+      ageCheckBool = false;
     }
     else {
-
+      $("#dobCheck").text("");
+      ageCheckBool = true;
     }
-  }*/
+  }
 
-  // Checks that all criteria is met so prfile can be created
+  // Checks that all criteria is met so profile can be created
   function buttonClickable(){
+
+    // log to show bool values
     console.log("Password:" +  "\n" + ""
                   +  "\n" + "Length: " + lenCheckBool
                   +  "\n" + "Capital: " + charCheckBool
                   +  "\n" + "Number: " + numCheckBool
+                  +  "\n" + "Age: " + ageCheckBool
                   +  "\n" + "");
 
-    if (lenCheckBool && charCheckBool && numCheckBool){
+    if (lenCheckBool && charCheckBool && numCheckBool && ageCheckBool){
       $("#submit-button").attr('disabled', false);
       $("#submit-button").css('background',
         'linear-gradient(rgba(51, 133, 255, 0.7), rgba(51, 133, 255, 0.9))');
@@ -88,22 +100,23 @@ $("document").ready(function(){
     }
   }
 
-  // AJAX call that is called when the password field changes
-  $("#password").keyup(function(){
-    var password = $(this).val();
+  // AJAX call that is called when the password or age field changes
+  $("#password, #DOB").each(function(){
+    $(this).keyup(function(){
+      var password = $("#password").val();
+      var dob = $("#DOB").val();
 
-    $.ajax({
-      type:"POST",
-      data:({
-        password: password
-      }),
-      datatype: "text",
-      success: function(){
-        passwordLenCheck(password);
-        passwordCharCheck(password);
-        passwordNumCheck(password);
-        buttonClickable();
-      }
+      $.ajax({
+        type:"POST",
+        datatype: "text",
+        success: function(){
+          passwordLenCheck(password);
+          passwordCharCheck(password);
+          passwordNumCheck(password);
+          ageCheck(dob);
+          buttonClickable();
+        }
+      });
     });
   });
 });

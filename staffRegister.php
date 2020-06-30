@@ -45,9 +45,10 @@
         <h1> Register </h1>
         <input name="forename" class="input-button" type="text" placeholder="Forename" />
         <input name="surname" class="input-button" type="text" placeholder="Surname" />
-        <input name="password" class="input-button" type="text" placeholder="Password" />
+        <input id="password" name="password" class="input-button" type="text" placeholder="Password" />
         <p id="passwordCheck"></p>
         <input id="DOB" name="DOB" class="input-button" type="date" />
+        <p id="dobCheck" class="validCheck"></p>
         <input name="submitButton" id="submit-button" class="submit-button input-button" type="submit" value="Create Account"/>
         <p> Already have an account? <a href="login.php"> Log in here. </a></p>
       </form>

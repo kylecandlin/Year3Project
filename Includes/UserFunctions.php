@@ -13,7 +13,7 @@
     }
 
     // Function to add user to DB
-    public function CreateUser($username, $password){
+    public function CreateUser($forename, $surname, $username, $password, $dob){
       // Password hashing
       $options = [
         'cost' => 14,
@@ -21,7 +21,7 @@
       $passwordHash = password_hash($password.$this->salt, PASSWORD_BCRYPT, $options);
 
       // Check if user already exists
-      $sql = "SELECT CustomerID, Username, Password FROM Customer WHERE Username = :username";
+      $sql = "SELECT Username FROM Customer WHERE Username = :username";
       $stmt = $this->pdo->prepare($sql);
 
       $stmt->bindValue(':username', $username);
@@ -35,7 +35,7 @@
       }
       else {
         // Insert into DB and log in
-        $sqlInsert = "INSERT INTO Customer(Username, Password) VALUES('$username', '$passwordHash')";
+        $sqlInsert = "INSERT INTO Customer(Forename, Surname, Username, Password, Age) VALUES('$forename', '$surname', '$username', '$passwordHash', '$dob')";
         $stmt = $this->pdo->prepare($sqlInsert);
 
         $stmt->execute();
